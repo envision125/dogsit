@@ -1,0 +1,124 @@
+/* Styles Applied Across All Apps Views */
+
+body {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* background: linear-gradient(135deg, #161f28, #000000); */
+  /* background: linear-gradient(135deg, #ffffff, #6d1b1b); */
+  line-height: 1.6;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: left;
+}
+
+.logo img {
+  width: 80px; /* adjust the width as needed */
+  height: auto;
+  margin: 0; /* remove margin to align with nav */
+}
+.hamburger {
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  display: block;
+  margin-bottom: 5px;
+  background-color: #860404;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b70000;
+}
+.nav-links a:hover,
+a:focus {
+  background-color: #ffffff;
+}
+
+@media (max-width: 635px) {
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1100;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #000000;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    width: 200px;
+  }
+
+  .nav-links.expanded {
+    display: flex;
+  }
+}
+
+@media (min-width: 636px) {
+  .nav-links {
+    display: flex;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger .line {
+  transition: all 0.3s ease;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}

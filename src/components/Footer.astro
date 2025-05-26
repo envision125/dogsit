@@ -1,0 +1,65 @@
+---
+import Social from "./Social.astro";
+import bgLogo from "../assets/logoicon.jpg";
+
+const today = new Date();
+---
+
+<style>
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: #00468c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 6.5px solid rgb(151, 6, 6);
+  }
+  footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  footer img {
+    width: 80px; /* adjust the width as needed */
+    height: 80px;
+    margin: 20px auto; /* adjust the margin as needed */
+    border-radius: 40px;
+  }
+
+  .copyright-tag {
+    color: #ede1d1;
+    font-size: 1p6px;
+
+    /* color: rgb(255, 251, 0); */
+  }
+</style>
+<footer>
+  <div>
+    <img src={bgLogo.src} alt="Nak Logo" width="" height="50" />
+  </div>
+
+  <div>
+    <p>Follow Our</p>
+    <Social platform="instagram" username="gcaa_nak" />
+    <p>GACAA</p>
+  </div>
+  <div>
+    <p>Follow Our</p>
+    <Social platform="instagram" username="sonomanak" />
+    <p>Undergrads</p>
+  </div>
+
+  <div class="copyright-tag">
+    &copy; {today.getFullYear()} All rights reserved | Tortas Ahogadas Mi Barrio
+  </div>
+</footer>
