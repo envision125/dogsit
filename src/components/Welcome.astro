@@ -13,27 +13,26 @@ const subName = "Estilo Jalisco";
     <div class="banner-text">
       <h1>{resturantName}</h1>
       <p>
-        {subName}
+        {subName} 
       </p>
     </div>
   </div>
 
   <div id="container">
-    <!-- <img id="background" src={banneIMG.src} alt="" fetchpriority="high" />
+    <main>
+      <!-- <section id="hero">
+        <h1>Welcome to {resturantName}</h1>
+        <p>
+          {subName} 
+        <section id="links">
+           <img id="" src={banneIMG.src} alt="" fetchpriority="high" />
 	 
 	<a href="https://astro.build"
 				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
 			>
 	
-	-->
-    <main>
-      <section id="hero">
-        <!-- 			
-			<h1>
-				<code><pre>Tortas Ahogas </pre></code>
-			</h1> -->
-        <section id="links"></section>
-      </section>
+        </section>
+      </section> -->
     </main>
   </div>
 
@@ -62,7 +61,7 @@ const subName = "Estilo Jalisco";
       vertical-align: middle;
       width: 100%;
       height: 100;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
       background-repeat: no-repeat;
       object-fit: cover;
     }
@@ -85,20 +84,33 @@ const subName = "Estilo Jalisco";
       transform: translate(-50%, -50%);
       text-align: center;
       z-index: 2;
-      text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.75);
-     
+      text-transform: uppercase;
     }
 
     .banner-text h1 {
-      font-size: 2.5rem;
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
       color: #fff;
       margin: 0;
-    }
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.75);
 
+      -webkit-text-stroke: 2px rgb(117, 0, 0);
+    }
     .banner-text p {
-      font-size: 1.2rem;
-      color: #559507;
-      margin-top: 0.5rem;
+      font-size: clamp(1rem, 3vw, 2rem);
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-shadow: 2px 2px 12px rgba(84, 83, 83, 0.694);
+            background: linear-gradient(14deg, #000000 0%, #ff0000 100%);
+
+      /* -webkit-text-stroke: 0.5px rgb(255, 255, 255); */
     }
     main {
       height: 100%;

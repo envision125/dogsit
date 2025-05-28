@@ -1,20 +1,19 @@
 ---
 import Social from "./Social.astro";
 import bgLogo from "../assets/logoicon.jpg";
-
-const today = new Date();
 ---
 
 <style>
+
   footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
     padding: 1rem 2rem;
-    background-color: #00468c;
+    background-color: #ffffff;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-top: 6.5px solid rgb(151, 6, 6);
   }
   footer div {
     display: flex;
@@ -27,40 +26,54 @@ const today = new Date();
     font-weight: bold;
     color: #000000;
     font-weight: 600;
-    text-transform: uppercase;
+  text-transform: uppercase;
+
   }
+
   footer img {
-    width: 80px; /* adjust the width as needed */
-    height: 80px;
-    margin: 20px auto; /* adjust the margin as needed */
-    border-radius: 40px;
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
   }
-
-  .copyright-tag {
-    color: #ede1d1;
-    font-size: 1p6px;
-    text-align: center;
-
-    /* color: rgb(255, 251, 0); */
+  footer img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  footer p:hover {
+    color: #ff0000;
+    transition: color 0.3s ease;
+  }
+  footer p:last-child {
+    font-size: 1.5rem;
+    color: #ff0000;
+    font-weight: 700;
+  }
+  footer p:last-child:hover {
+    color: #000000;
+  }
+  footer p:first-child {
+    font-size: 1.2rem;
+    color: #000000;
+    font-weight: 600;
   }
 </style>
 <footer>
   <div>
     <img src={bgLogo.src} alt="Nak Logo" width="" height="50" />
+    <div>
+      <p>Follow Us!</p>
+      <Social platform="instagram" username="gcaa_nak" />
+      <Social platform="tiktok" username="@tortashogadasmibarrio" />
+    </div>
   </div>
-
+ 
   <div>
-    <p>Follow Our</p>
-    <Social platform="instagram" username="gcaa_nak" />
+    <p>Section 1</p>
+   
     <p>GACAA</p>
   </div>
   <div>
-    <p>Follow Our</p>
-    <Social platform="instagram" username="sonomanak" />
-    <p>Undergrads</p>
-  </div>
-
-  <div class="copyright-tag">
-    &copy; {today.getFullYear()} All rights reserved | Tortas Ahogadas Mi Barrio
+    <p>Section 2r</p>
+    
   </div>
 </footer>
