@@ -8,20 +8,25 @@ body {
 }
 
 .nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  /* display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 100%; */
 }
 
-
-
-.logo {
+.nav-logo {
   display: flex;
   align-items: left;
 }
 
-.logo img {
+.nav-logo img {
   width: 80px; /* adjust the width as needed */
   height: auto;
   margin: 0; /* remove margin to align with nav */
@@ -50,6 +55,7 @@ body {
 .nav-links {
   display: flex;
   gap: 20px;
+  justify-content: center;
 }
 
 .nav-links a {
@@ -60,12 +66,17 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #b70000;
+  color: #860404;
+  border-radius: 6px;
+  margin-bottom: 1rem;
 }
-.nav-links a:hover,
-a:focus {
-  background-color: #ffffff;
+.nav-links a:hover {
+  background: linear-gradient(14deg, #000000 0%, #ff0000 100%);
+
+  color: white;
+  outline: none;
 }
+
 
 @media (max-width: 635px) {
   .hamburger {

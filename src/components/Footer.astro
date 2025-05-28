@@ -1,33 +1,40 @@
 ---
 import Social from "./Social.astro";
 import bgLogo from "../assets/logoicon.jpg";
+
+const address1 = "4749 International Blvd, Oakland, CA";
+const address2 = "3355 Santa Rosa Ave., Santa Rosa, CA";
 ---
 
 <style>
-
   footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
     padding: 1rem 2rem;
-    background-color: #ffffff;
-    border-radius: 8px;
+    background-color: #ffffffeb;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: #002879 8px solid;
   }
-  footer div {
+  footer > div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 50%;
+  }
+  footer > div > div {
+    flex-direction: row;
+    gap: 0.5rem;
   }
   footer p {
     margin: 0;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #000000;
+    color: #790000;
     font-weight: 600;
-  text-transform: uppercase;
-
+    text-transform: uppercase;
   }
 
   footer img {
@@ -39,41 +46,68 @@ import bgLogo from "../assets/logoicon.jpg";
     transform: scale(1.05);
     transition: transform 0.3s ease;
   }
-  footer p:hover {
-    color: #ff0000;
-    transition: color 0.3s ease;
-  }
-  footer p:last-child {
-    font-size: 1.5rem;
-    color: #ff0000;
-    font-weight: 700;
-  }
-  footer p:last-child:hover {
-    color: #000000;
-  }
-  footer p:first-child {
-    font-size: 1.2rem;
-    color: #000000;
+
+  .location h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
     font-weight: 600;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #dedede;
+    padding-bottom: 5px;
+    user-select: none;
+  }
+
+  .right-section {
+    background-color: #790000;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+  }
+
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 </style>
 <footer>
-  <div>
+  <div class="left-section">
     <img src={bgLogo.src} alt="Nak Logo" width="" height="50" />
+    <p>Follow Us!</p>
     <div>
-      <p>Follow Us!</p>
-      <Social platform="instagram" username="gcaa_nak" />
-      <Social platform="tiktok" username="@tortashogadasmibarrio" />
+      <Social platform="instagram" username="tortasahogadasmibarrio" />
+      <Social platform="tiktok" username="@tortasahogadasmibarrio" />
     </div>
   </div>
- 
-  <div>
-    <p>Section 1</p>
-   
-    <p>GACAA</p>
-  </div>
-  <div>
-    <p>Section 2r</p>
-    
+
+  <div class="right-section">
+    <div class="location">
+      <h4>Santa Rosa, CA</h4>
+      <div class="address" aria-label="Address for location 1">
+        {address1}<br />
+      </div>
+      <div class="hours" aria-label="Hours for location 1">
+        Mon - Fri: 9am - 6pm<br />
+      </div>
+    </div>
+
+    <div class="location">
+      <h4>Oakland, CA</h4>
+      <div class="address" aria-label="Address for location 2">
+        {address2}<br />
+      </div>
+      <div class="hours" aria-label="Hours for location 2">
+        Mon - Sun: 9am - 6pm<br />
+      </div>
+    </div>
   </div>
 </footer>
+<!-- .left-section {
+    flex: 1;
+  }
+  .right-section {
+    flex: 1;
+    background-color: rgb(151, 6, 6);
+    color: white;
+    padding: 1rem 2rem;
+  } -->
