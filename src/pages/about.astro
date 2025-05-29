@@ -1,12 +1,15 @@
 ---
 import Layout from "../layouts/About.astro";
+import bgLogo from "../assets/logoicon.jpg";
+import aboutImage from "../assets/plaza.jpeg";
+
 ---
 
 <Layout
   title="OUR STORY"
   description="Mexican Resturant"
   pubDate={new Date("Jan 01 2005")}
-  heroImage="/plaza.jpeg"
+  heroImage={aboutImage}
 >
   <p>
     Growing up meals weren’t just food for the Padilla family. They were
@@ -28,4 +31,5 @@ import Layout from "../layouts/About.astro";
       style={{ color: "gold" }}>Oakland, CA</span
     >
   </p>
+ 
 </Layout>
