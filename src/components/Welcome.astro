@@ -2,7 +2,7 @@
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
 import banneIMG from "../assets/bg-nak.jpg";
-import "../styles/fuego.css";
+// import "../styles/fuego.css";
 
 import slideUno from "../assets/torta.jpg";
 import slideDos from "../assets/trestacos.jpeg";
@@ -13,47 +13,64 @@ const resturantName = "Tortas Ahogadas Mi Barrio";
 const subName = "Estilo Jalisco";
 ---
 
-<section>
-  <div class="banner-image">
-    <img src={banneIMG.src} alt="Background Image" />
-    <div class="banner-text">
-      <h1>{resturantName}</h1>
-      <p>
-        {subName}
-      </p>
-    </div>
+<div class="banner-image">
+  <img src={banneIMG.src} alt="Background Image" />
+  <div class="banner-text">
+    <h1>{resturantName}</h1>
+    <p>
+      {subName}
+    </p>
   </div>
-</section>
-
+</div>
 <main>
-  <section></section>
-  <hr />
-  <section id="reviews">
-    
-  </section>
-
-  <section>
-    <h1>Popular Plates</h1>
-    <p></p>
+  <!-- <section id="menu">
     <div>
       <div class="plate-container">
         <div class="">
-          <img src={slideUno.src} style="width:100%" />
+          <img src={slideUno.src} style="width:50%" />
         </div>
 
         <div class="">
-          <img src={slideDos.src} style="width:100%" />
+          <img src={slideDos.src} style="width:50%" />
         </div>
 
         <div class="">
-          <img src={slideTres.src} style="width:100%" />
+          <img src={slideTres.src} style="width:50%" />
           <div class="">View More</div>
         </div>
       </div>
     </div>
+  </section> -->
+
+  <section >
+      <h2 class="section-title">Popular Plates</h2>
+
+<div class="card-container" role="list" aria-label="Image cards">
+    <article class="card" role="listitem" tabindex="0" aria-label="Mountain landscape image">
+<img src={slideUno.src} />      <!-- <div class="card-caption">Mountain Landscape</div> -->
+    </article>
+    <article class="card" role="listitem" tabindex="0" aria-label="Forest pathway image">
+      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80" alt="Forest pathway" />
+      <!-- <div class="card-caption">Forest Pathway</div> -->
+    </article>
+    <article class="card" role="listitem" tabindex="0" aria-label="City skyline at dusk image">
+      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80" alt="City skyline at dusk" />
+      <!-- <div class="card-caption">City Skyline</div> -->
+    </article>
+    </div>
   </section>
+  <button class="view-more-btn" type="button" aria-label="View more destinations" onclick="location.href='about'">
+    View More
+  </button>
+  
   <hr />
 </main>
+<section>
+  <br />
+</section>
+<script>
+  import "../scripts/slider.js";
+</script>
 
 <style>
   #background {
@@ -64,12 +81,6 @@ const subName = "Estilo Jalisco";
     height: 100%;
     z-index: -1;
     filter: blur(100px);
-  }
-
-  #container {
-    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
-      Arial, sans-serif;
-    height: 100%;
   }
 
   .banner-image {
@@ -83,6 +94,17 @@ const subName = "Estilo Jalisco";
     box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
     background-repeat: no-repeat;
     object-fit: cover;
+    border-top: #000000 4px solid;
+    border-bottom: #000000 4px solid;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px 0;
+    color: #e60606;
+    /* width: 100%;
+      max-width: 1000px; */
   }
 
   .banner-image::before {
@@ -131,132 +153,103 @@ const subName = "Estilo Jalisco";
 
     /* -webkit-text-stroke: 0.5px rgb(255, 255, 255); */
   }
-  /* main {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-  } */
-
-  #reviews {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    justify-content: center;
-    padding: 16px;
-  }
-
-  h1 {
-    font-size: 22px;
-    margin-top: 0.25em;
-  }
-
-  #links {
-    display: flex;
-    gap: 16px;
-  }
-
-  #links a {
-    display: flex;
-    align-items: center;
-    padding: 10px 12px;
-    color: #111827;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  #links a:hover {
-    color: rgb(78, 80, 86);
-  }
-
-  #links a svg {
-    height: 1em;
-    margin-left: 8px;
-  }
-
-  #links a.button {
-    color: white;
-    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-    box-shadow:
-      inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-      inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-    border-radius: 10px;
-  }
-
-  #links a.button:hover {
-    color: rgb(230, 230, 230);
-    box-shadow: none;
-  }
-
-  pre {
-    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
-      Consolas, "DejaVu Sans Mono", monospace;
-    font-weight: normal;
-    background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin: 0;
-  }
-
-  h2 {
-    margin: 0 0 1em;
-    font-weight: normal;
-    color: #111827;
-    font-size: 20px;
-  }
-
-  p {
-    color: #4b5563;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.006em;
-    margin: 0;
-  }
-
-  code {
-    display: inline-block;
-    background:
-      linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-      linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 6px 8px;
-  }
+ 
 
   .box {
     padding: 16px;
-    background: rgba(255, 255, 255, 1);
+    background: rgb(201, 12, 12);
     border-radius: 16px;
     border: 1px solid white;
   }
 
-  @media screen and (max-height: 368px) {
-    #news {
-      display: none;
+  .card-container {
+      display: flex;
+      gap: 24px;
+      max-width: 1000px;
+      width: 100%;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 0 auto;
     }
-  }
-
-  @media screen and (max-width: 768px) {
-    #container {
+     .card-container h2{
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #222;
+      text-align: center;
+      width: 100%;
+      max-width: 1000px;
+    }
+    .card {
+      margin-top: 16px;;
+      flex: 1 1 300px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
       display: flex;
       flex-direction: column;
     }
-
-    #hero {
+    .card:hover,
+    .card:focus-within {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      outline: none;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
       display: block;
-      padding-top: 10%;
+    }
+    .card-caption {
+      padding: 14px 16px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #222;
     }
 
-    #links {
-      flex-wrap: wrap;
+
+ .view-more-btn {
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      background-color: #4a90e2;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }    
+    .view-more-btn:hover,
+    .view-more-btn:focus {
+      background-color: #3a78c2;
+      outline: none;
+      box-shadow: 0 6px 16px rgba(58, 120, 194, 0.7);
     }
 
-    #links a.button {
-      padding: 14px 18px;
-    }
 
-    h1 {
-      line-height: 1.5;
+
+    /* Responsive layout */
+    @media (max-width: 850px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 90vw;
+        max-width: 400px;
+      }
     }
-  }
 </style>
+
+
