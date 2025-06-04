@@ -1,19 +1,67 @@
-let slideIndex = 0;
-showSlides();
+const slides = document.querySelectorAll('.carousel-slide img');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const dots = document.querySelectorAll('.dots span');
+let currentIndex = 0;
+let timer = null;
+const slideInterval = 2000;
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+function goToSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+    dots[i].classList.toggle('active', i === index);
+    dots[i].setAttribute('aria-selected', i === index ? 'true' : 'false');
+    dots[i].setAttribute('tabindex', i === index ? '0' : '-1');
+  });
+  currentIndex = index;
 }
+
+function nextSlide() {
+  let nextIndex = (currentIndex + 1) % slides.length;
+  goToSlide(nextIndex);
+}
+
+function prevSlide() {
+  let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+  goToSlide(prevIndex);
+}
+
+function resetTimer() {
+  clearInterval(timer);
+  timer = setInterval(nextSlide, slideInterval);
+}
+
+prevBtn.addEventListener('click', () => {
+  prevSlide();
+  resetTimer();
+});
+
+nextBtn.addEventListener('click', () => {
+  nextSlide();
+  resetTimer();
+});
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    goToSlide(i);
+    resetTimer();
+  });
+  dot.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      goToSlide(i);
+      resetTimer();
+    }
+  });
+});
+
+// Auto slide
+timer = setInterval(nextSlide, slideInterval);
+
+// Optional: Pause on hover
+document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
+  clearInterval(timer);
+});
+document.querySelector('.carousel-container').addEventListener('mouseleave', () => {
+  resetTimer();
+});

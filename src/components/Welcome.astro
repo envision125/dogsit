@@ -1,6 +1,9 @@
 ---
+
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
+import Slider from "../components/Slider.astro";
+import ImageSlideSection from "./ImageSlideSection.astro";
 import banneIMG from "../assets/bg-nak.jpg";
 // import "../styles/fuego.css";
 
@@ -23,56 +26,100 @@ const subName = "Estilo Jalisco";
   </div>
 </div>
 <main>
-  <!-- <section id="menu">
-    <div>
-      <div class="plate-container">
-        <div class="">
-          <img src={slideUno.src} style="width:50%" />
-        </div>
+    <ImageSlideSection
+  title="Discover Our Delicious Menu"
+  description="Explore a variety of authentic dishes with fresh ingredients and bold flavors. Our image slider showcases some of our most popular plates that will surely satisfy your cravings."
+/>
+  <section class="">
+    <h2 class="section-title">Popular Plates</h2>
+    <div class="card-container" role="list" aria-label="Image cards">
+      <article
+        class="card"
+        role="listitem"
+        tabindex="0"
+        aria-label="Mountain landscape image"
+      >
+        <img src={slideUno.src} />
+        <!-- <div class="card-caption">Mountain Landscape</div> -->
+      </article>
+      <article
+        class="card"
+        role="listitem"
+        tabindex="0"
+        aria-label="Forest pathway image"
+      >
+        <img src={slideDos.src} />
+        <!-- <div class="card-caption">Forest Pathway</div> -->
+      </article>
+      <article
+        class="card"
+        role="listitem"
+        tabindex="0"
+        aria-label="City skyline at dusk image"
+      >
+        <img src={slideTres.src} />
 
-        <div class="">
-          <img src={slideDos.src} style="width:50%" />
-        </div>
+        <!-- <div class="card-caption">City Skyline</div> -->
+      </article>
+    </div>
+    <button
+      class="view-more-btn"
+      type="button"
+      aria-label="View more destinations"
+      onclick="location.href='about'"
+    >
+      VIEW MORE
+    </button>
+  </section>
 
-        <div class="">
-          <img src={slideTres.src} style="width:50%" />
-          <div class="">View More</div>
+</main>
+
+<!-- <div class="">
+  <section class="color-section">
+    <h2 class="section-title">Reviews</h2>
+    <div class="card-container" role="list" aria-label="Review cards">
+      <article
+        class="review-card"
+        role="listitem"
+        tabindex="0"
+        aria-label="Review by John Doe"
+      >
+        <p class="review-text">"Best tortas in town! Highly recommend."</p>
+        <p class="review-author">- John Doe</p>
+        <div class="review-controls">
+          <button type="button">Like</button>
+          <button type="button">Reply</button>
         </div>
-      </div>
+      </article>
+      <article
+        class="review-card"
+        role="listitem"
+        tabindex="0"
+        aria-label="Review by Jane Smith"
+      >
+        <p class="review-text">"Amazing flavors and great service!"</p>
+        <p class="review-author">- Jane Smith</p>
+        <div class="review-controls">
+          <button type="button">Like</button>
+          <button type="button">Reply</button>
+        </div>
+      </article>
     </div>
   </section> -->
 
-  <section >
-      <h2 class="section-title">Popular Plates</h2>
 
-<div class="card-container" role="list" aria-label="Image cards">
-    <article class="card" role="listitem" tabindex="0" aria-label="Mountain landscape image">
-<img src={slideUno.src} />      <!-- <div class="card-caption">Mountain Landscape</div> -->
-    </article>
-    <article class="card" role="listitem" tabindex="0" aria-label="Forest pathway image">
-      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80" alt="Forest pathway" />
-      <!-- <div class="card-caption">Forest Pathway</div> -->
-    </article>
-    <article class="card" role="listitem" tabindex="0" aria-label="City skyline at dusk image">
-      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80" alt="City skyline at dusk" />
-      <!-- <div class="card-caption">City Skyline</div> -->
-    </article>
-    </div>
-  </section>
-  <button class="view-more-btn" type="button" aria-label="View more destinations" onclick="location.href='about'">
-    View More
-  </button>
-  
-  <hr />
-</main>
-<section>
-  <br />
-</section>
 <script>
-  import "../scripts/slider.js";
+  import "../scripts/rev.js";
 </script>
 
 <style>
+  
+  .checked {
+    color: orange;
+    align-items: center;
+    display: inline-block;
+    justify-content: center;
+  }
   #background {
     position: fixed;
     top: 0;
@@ -94,17 +141,27 @@ const subName = "Estilo Jalisco";
     box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
     background-repeat: no-repeat;
     object-fit: cover;
-    border-top: #000000 4px solid;
-    border-bottom: #000000 4px solid;
+
+    border-top: #ff0808 6px solid;
+    
   }
   .section-title {
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
-    margin: 20px 0;
-    color: #e60606;
+    margin: 5px 0;
+    color: #e9ddd4;
     /* width: 100%;
       max-width: 1000px; */
+  }
+  .color-section {
+    background-color: #900020;
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+    width: 90%;
   }
 
   .banner-image::before {
@@ -153,103 +210,158 @@ const subName = "Estilo Jalisco";
 
     /* -webkit-text-stroke: 0.5px rgb(255, 255, 255); */
   }
- 
 
-  .box {
+  /* .box {
     padding: 16px;
-    background: rgb(201, 12, 12);
+    background: rgb(118, 4, 4);
     border-radius: 16px;
-    border: 1px solid white;
+   
+  } */
+   .box {
+    height: 100vh;
+    width: 100%;
+    /* padding: 16px; */
+    background: rgb(118, 4, 4);
+    /* border-radius: 16px; */
+   
   }
 
   .card-container {
-      display: flex;
-      gap: 24px;
-      max-width: 1000px;
-      width: 100%;
-      justify-content: center;
-      align-items: flex-start;
-      margin: 0 auto;
-    }
-     .card-container h2{
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 30px;
-      color: #222;
-      text-align: center;
-      width: 100%;
-      max-width: 1000px;
+    display: flex;
+    gap: 24px;
+    max-width: 1000px;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+  .card-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #83a40b;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+  }
+  .card {
+    margin-top: 16px;
+    flex: 1 1 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(255, 42, 42, 0.432);
+    overflow: hidden;
+    cursor: pointer;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: #003f8c 2px solid;
+  }
+  .card:hover,
+  .card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    outline: none;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+  .card-caption {
+    padding: 14px 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .view-more-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(100, 97, 97, 0.7);
+
+    background-color: #900020;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      box-shadow 0.3s ease;
+    text-align: center;
+  }
+  .view-more-btn:hover,
+  .view-more-btn:focus {
+    background-color: #d20202;
+    outline: none;
+    box-shadow: 0 6px 16px rgba(194, 58, 58, 0.7);
+  }
+
+  .review-card {
+    background: rgb(255, 255, 255);
+    padding: 2rem;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .review-text {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    color: rgb(122, 6, 6);
+    font-weight: 900;
+  }
+
+  .review-author {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffb300;
+    font-weight: 600;
+
+  }
+
+  .review-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+
+  .review-controls button {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .review-controls button:hover {
+    background: #0056b3;
+  }
+
+  /* Responsive layout */
+  @media (max-width: 850px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
     }
     .card {
-      margin-top: 16px;;
-      flex: 1 1 300px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
+      width: 90vw;
+      max-width: 400px;
     }
-    .card:hover,
-    .card:focus-within {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-      outline: none;
-    }
-    .card img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      display: block;
-    }
-    .card-caption {
-      padding: 14px 16px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #222;
-    }
-
-
- .view-more-btn {
-      display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-      padding: 12px 24px;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #fff;
-      background-color: #4a90e2;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-    }    
-    .view-more-btn:hover,
-    .view-more-btn:focus {
-      background-color: #3a78c2;
-      outline: none;
-      box-shadow: 0 6px 16px rgba(58, 120, 194, 0.7);
-    }
-
-
-
-    /* Responsive layout */
-    @media (max-width: 850px) {
-      .card-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      .card {
-        width: 90vw;
-        max-width: 400px;
-      }
-    }
+  }
 </style>
 
 

@@ -31,32 +31,25 @@ const subName = "Estilo Jalisco";
   } */
   .carousel-container {
     position: relative;
-/* width: 90vw; */
-      max-width: 700px;
- 
-
-    /* max-width: 90vw;
-    width: 600px;   */
-    /* width set for larger screens max-w : 90vw, wL 600px */
+    max-width: 90vw;
+    width: 600px;
     /* height set via aspect ratio trick for responsiveness */
     aspect-ratio: 3 / 2;
-    border-radius: 6px;
+    border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 16px 40px rgba(168, 19, 19, 0.3);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
     background: #fff;
-
   }
-
   .carousel-slide {
-    width: 100;
+    width: 100%;
     height: 100%;
     position: relative;
   }
   .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
-    
+    object-fit: cover;
+    border-radius: 4px;
     opacity: 0;
     position: absolute;
     top: 0;
@@ -116,7 +109,7 @@ const subName = "Estilo Jalisco";
     transition: background-color 0.3s ease;
   }
   .dots span.active {
-    background-color: rgba(0, 137, 30, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
   }
   /* Responsive adjustments */
   @media (max-width: 700px) {
@@ -136,51 +129,74 @@ const subName = "Estilo Jalisco";
       margin: 0 4px;
     }
   }
-  
-    
+
+  .right {
+      flex: 1 1 50%;
+      padding: 40px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 2;
+      position: relative;
+    }
+    .title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin: 0 0 20px;
+      color: #007BFF;
+    }
+    .quote {
+      font-size: 1.3rem;
+      font-style: italic;
+      line-height: 1.5;
+      color: #444;
+      border-left: 5px solid #007BFF;
+      padding-left: 20px;
+      margin: 0;
+      user-select: none;
+    }
 </style>
 
 <body>
- 
- 
-   
-      <div class="carousel-container" aria-label="Image Carousel">
-        <div class="carousel-slide">
-          <img src={slideUno.src} alt="Nature Image 1" class="active" />
-          <img src={slideDos.src} alt="Nature Image 2" />
-          <img src={slideTres.src} alt="Nature Image 3" />
-          <!-- <img src={slideTres.src} alt="Nature Image 4" /> -->
-        </div>
-        <div class="carousel-nav">
-          <button class="prev-btn" aria-label="Previous Image">&#10094;</button>
-          <button class="next-btn" aria-label="Next Image">&#10095;</button>
-        </div>
-        <div class="dots" role="tablist" aria-label="Select Image Slide">
-          <span
-            role="tab"
-            tabindex="0"
-            aria-selected="true"
-            aria-controls="slide1"
-            class="active"></span>
-          <span
-            role="tab"
-            tabindex="-1"
-            aria-selected="false"
-            aria-controls="slide2"></span>
-          <span
-            role="tab"
-            tabindex="-1"
-            aria-selected="false"
-            aria-controls="slide3"></span>
-          <!-- <span
-            role="tab"
-            tabindex="-1"
-            aria-selected="false"
-            aria-controls="slide4"></span> -->
-        </div>
+  <div class="carousel-container" aria-label="Image Carousel">
+    <div class="carousel-slide">
+      <img src={slideUno.src} alt="Nature Image 1" class="active" />
+      <img src={slideDos.src} alt="Nature Image 2" />
+      <img src={slideTres.src} alt="Nature Image 3" />
+      <!-- <img src={slideTres.src} alt="Nature Image 4" /> -->
+    </div>
+    <div class="carousel-nav">
+      <button class="prev-btn" aria-label="Previous Image">&#10094;</button>
+      <button class="next-btn" aria-label="Next Image">&#10095;</button>
+    </div>
+    <div class="dots" role="tablist" aria-label="Select Image Slide">
+      <span
+        role="tab"
+        tabindex="0"
+        aria-selected="true"
+        aria-controls="slide1"
+        class="active"></span>
+      <span
+        role="tab"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="slide2"></span>
+      <span
+        role="tab"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="slide3"></span>
+      <!-- <span
+        role="tab"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="slide4"></span> -->
+    </div>
+  </div>
+   <div class="right">
+        <h1 class="title">Inspiration that Moves You</h1>
+        <p class="quote">“Creativity is intelligence having fun.” – Albert Einstein</p>
       </div>
- <h2>Come Check Us Out!</h2>
-  </>
 
   <script>
     import "../scripts/slider.js";
