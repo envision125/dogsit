@@ -1,4 +1,13 @@
 /* Styles Applied Across All Apps Views */
+
+ :root {
+    --button-bg: #007bff;
+    --button-text: #ffffff;
+    --button-text-hover: #ffdd57;
+    --button-border-radius: 8px;
+    --transition-duration: 0.3s;
+  }
+
 body {
   font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   /* background: linear-gradient(135deg, #161f28, #000000); */
