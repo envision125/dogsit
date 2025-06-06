@@ -1,25 +1,50 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import heroImage from '../assets/plaza.jpeg';
-
-const pageTitle = "About Us";
-const pageDescription = "Learn more about our story and values.";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
-  <section style="text-align: center; margin: 2rem 0;">
-    <img src={heroImage.src} alt="Hero Image"  />
+<style>
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+    margin: 2rem;
+  }
+
+  .hero img {
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: red 0px 5px 15px;
+  }
+
+  .about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+  }
+</style>
+
+<Layout>
+  <section class="hero">
+    <img src="/src/assets/plaza.jpeg" alt="Hero Image" />
   </section>
-  <article style="max-width: 720px; margin: 0 auto; padding: 1rem; color: #333; font-family: Arial, sans-serif;">
-    <h1>{pageTitle}</h1>
+  <section class="about-text">
+    <h1>About Us</h1>
     <p>
-      Welcome to our restaurant! We are passionate about bringing authentic flavors and a warm atmosphere to our community.
+      Welcome to our about page! Here you can learn more about our story,
+      mission, and values. We are passionate about delivering the best
+      experience to our customers.
     </p>
     <p>
-      Our story began many years ago with a dream to share traditional recipes passed down through generations.
+      This hero image highlights the essence of our brand and sets the tone for
+      what we stand for. Feel free to explore and get to know us better.
     </p>
-    <p>
-      We invite you to explore our menu and experience the taste of our heritage.
-    </p>
-  </article>
+  </section>
 </Layout>
