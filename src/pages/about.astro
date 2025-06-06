@@ -1,35 +1,25 @@
 ---
-import Layout from "../layouts/About.astro";
-import bgLogo from "../assets/logoicon.jpg";
-import aboutImage from "../assets/plaza.jpeg";
+import Layout from '../layouts/Layout.astro';
+import heroImage from '../assets/plaza.jpeg';
 
+const pageTitle = "About Us";
+const pageDescription = "Learn more about our story and values.";
 ---
 
-<Layout
-  title="OUR STORY"
-  description="Mexican Resturant"
-  pubDate={new Date("Jan 01 2005")}
-  heroImage={aboutImage}
->
-  <p>
-    Growing up meals weren’t just food for the Padilla family. They were
-    celebrations of life, love, and culture.
-  </p>
-  <p>
-    The Padilla family moved to <span style={{ color: "gold" }}
-      >Oakland, CA</span
-    > and brought with them, cherished recipes handed down through generations,
-    each dish carrying stories of their roots and their journey.
-  </p>
-  <p>
-    With a dream to share some authentic tortas ahogadas y tacos dorados,
-    <span style={{ color: "#006338" }}>Estilo Guadalajara!</span>
-  </p>
-  <p>
-    <span style={{ color: "red" }}>In 2005,</span> their dream became a reality,
-    Tortas Ahogadas Mi Barrio was opened in the heart of <span
-      style={{ color: "gold" }}>Oakland, CA</span
-    >
-  </p>
- 
+<Layout title={pageTitle} description={pageDescription}>
+  <section style="text-align: center; margin: 2rem 0;">
+    <img src={heroImage.src} alt="Hero Image"  />
+  </section>
+  <article style="max-width: 720px; margin: 0 auto; padding: 1rem; color: #333; font-family: Arial, sans-serif;">
+    <h1>{pageTitle}</h1>
+    <p>
+      Welcome to our restaurant! We are passionate about bringing authentic flavors and a warm atmosphere to our community.
+    </p>
+    <p>
+      Our story began many years ago with a dream to share traditional recipes passed down through generations.
+    </p>
+    <p>
+      We invite you to explore our menu and experience the taste of our heritage.
+    </p>
+  </article>
 </Layout>
