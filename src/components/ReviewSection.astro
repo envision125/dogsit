@@ -1,0 +1,131 @@
+---
+const reviews = [
+  {
+    text: "Want some amazing authentic Mexican food? This gem is a must",
+    author: "Lily"
+  },
+  {
+    text: "Very good food, I got the torta ahogada mixta and it did not disappoint.",
+    author: "Josh "
+  },
+  {
+    text: "Muy buenas las tortas y  todo lo demás también. 100% recomendado.",
+    author: "Miguel"
+  }
+];
+---
+
+<section class="color-section" aria-label="Customer Reviews">
+
+  <!-- // Section FIX -->
+  <h2 class="review-title">Amazing Reviews</h2>
+  <div class="card-container" role="list">
+    {reviews.map((review) => (
+      <article class="review-card" role="listitem" tabindex="0" aria-label={`Review by ${review.author}`}>
+        <div class="rating" aria-label="5 out of 5 stars">
+          ⭐⭐⭐⭐⭐
+        </div>
+        <p class="review-text">"{review.text}"</p>
+        <p class="review-author">- {review.author}</p>
+        
+        
+      </article>
+
+    ))}
+  </div>
+          <h2 class="">Check Out More Reviews</h2>
+
+  
+</section>
+
+<style>
+  .color-section {
+    background-color: #083D77;
+    padding: 40px 20px;
+    border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 15px;
+    margin: 20px auto;
+    max-width: 1500px;
+    width: 90%;
+    text-align: center;
+  }
+
+  .review-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 5px 0 30px 0;
+    color: #ffffff;
+   
+    
+    padding: 10px 0;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: #FFC857 4px solid;
+    
+  }
+
+  .card-container {
+    display: flex;
+    gap: 24px;
+    max-width: 1000px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .review-card {
+    background: #ffffff;
+    padding: 2rem;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(255, 251, 251, 0.1);
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    flex: 0 1 320px;
+    /* min-width: 300px; */
+   
+  }
+
+  .review-text {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #7a0606;
+    font-weight: 900;
+  }
+
+  .review-author {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FFC857;
+  }
+
+  
+
+  /* Responsive layout */
+  /* @media (max-width: 850px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .review-card {
+      width: 90vw;
+      max-width: 400px;
+    }
+  } */
+   @media (max-width: 450px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .review-card {
+      width: 90vw;
+      max-width: 400px;
+    }
+  }
+
+  
+</style>

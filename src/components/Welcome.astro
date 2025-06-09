@@ -11,6 +11,8 @@ import slideUno from "../assets/torta.jpg";
 import slideDos from "../assets/trestacos.jpeg";
 import slideTres from "../assets/huevos.jpg";
 import cuatro from "../assets/tostada.jpeg";
+import Review from '../components/ReviewSection.astro';
+
 
 const resturantName = "Tortas Ahogadas Mi Barrio";
 const subName = "Estilo Jalisco";
@@ -27,11 +29,13 @@ const subName = "Estilo Jalisco";
 </div>
 <main>
     <ImageSlideSection
-  title="Authentic Mexican Food"
+  title="Delicious Mexican Food!"
   description="Explore our amazing dishes with fresh ingredients and authenticate flavors. Satisfy your cravings with some traditional mexican food."
 />
+<Review/>
   <section class="">
     <h2 class="section-title">Popular Plates</h2>
+    <div class="title-underline"></div>
     <div class="card-container" role="list" aria-label="Image cards">
       <article
         class="card"
@@ -151,6 +155,8 @@ const subName = "Estilo Jalisco";
     font-weight: 700;
     margin: 5px 0;
     color: #900020;
+    
+
     /* width: 100%;
       max-width: 1000px; */
   }
@@ -285,9 +291,9 @@ const subName = "Estilo Jalisco";
     font-size: 1.2rem;
     font-weight: 600;
     color: #fff;
-    box-shadow: 0 6px 16px rgba(100, 97, 97, 0.7);
+    /* box-shadow: 0 6px 16px rgba(122, 121, 121, 0.7); */
 
-    background-color: #1C5898;
+    background-color: #FFC857;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -299,10 +305,10 @@ const subName = "Estilo Jalisco";
   .view-more-btn:hover,
   .view-more-btn:focus {
     background-color: #ffffff;
-    color: #1C5898;
-    border: #1C5898 4px solid;
+    color: #d79d28;
+    border: #FFC857 4px solid;
     outline: none;
-    box-shadow: 0 6px 16px rgba(58, 87, 194, 0.7);
+    box-shadow: 0 6px 16px rgba(190, 194, 58, 0.7);
     
   }
 

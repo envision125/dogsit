@@ -6,6 +6,12 @@
   --button-text-hover: #ffdd57;
   --button-border-radius: 8px;
   --transition-duration: 0.3s;
+  --tertiary: #ffdd57;
+  --chiva: #860404;
+  --chiva-dark: #6a0000;
+  --chiva-light: #ff0000;
+  --background: #000000;
+  --text-color: #f5f5f5;
 }
 
 body {
@@ -170,7 +176,7 @@ hr {
 }
 
 .title-underline {
-  border-top: 8px solid #ffd700;
+  border-top: 8px solid #083D77;
   width: 50px;
 
   margin: 20px auto;
