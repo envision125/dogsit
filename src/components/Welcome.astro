@@ -1,20 +1,13 @@
 ---
+import { Image } from "astro:assets";
 
- import { Image } from 'astro:assets'
-
-
-import astroLogo from "../assets/astro.svg";
-import background from "../assets/background.svg";
-import Slider from "../components/Slider.astro";
 import ImageSlideSection from "./ImageSlideSection.astro";
 import banneIMG from "../assets/bg-nak.jpg";
-// import "../styles/fuego.css";
 
-import torta from '../assets/torta.jpg';
+import torta from "../assets/torta.jpg";
 import slideDos from "../assets/trestacos.jpeg";
 import slideTres from "../assets/huevos.jpg";
-import Review from '../components/ReviewSection.astro';
-
+import Review from "../components/ReviewSection.astro";
 
 const resturantName = "Tortas Ahogadas Mi Barrio";
 const subName = "Estilo Jalisco";
@@ -31,11 +24,11 @@ const subName = "Estilo Jalisco";
   </div>
 </div>
 <main>
-    <ImageSlideSection
-  title="Delicious Mexican Food!"
-  description="Explore our amazing dishes with fresh ingredients and authenticate flavors. Satisfy your cravings with some traditional mexican food."
-/>
-<Review/>
+  <ImageSlideSection
+    title="Delicious Mexican Food!"
+    description="Explore our amazing dishes with fresh ingredients and authenticate flavors. Satisfy your cravings with some traditional mexican food."
+  />
+  <Review />
   <section class="">
     <h2 class="section-title">Popular Plates</h2>
     <div class="title-underline"></div>
@@ -47,7 +40,7 @@ const subName = "Estilo Jalisco";
         aria-label="Mountain landscape image"
       >
         <Image src={torta} alt="A description of my image." />
-        
+
         <!-- <div class="card-caption">Mountain Landscape</div> -->
       </article>
       <article
@@ -79,7 +72,6 @@ const subName = "Estilo Jalisco";
       VIEW MORE
     </button>
   </section>
-
 </main>
 
 <!-- <div class="">
@@ -115,13 +107,11 @@ const subName = "Estilo Jalisco";
     </div>
   </section> -->
 
-
 <script>
   import "../scripts/rev.js";
 </script>
 
 <style>
-  
   .checked {
     color: orange;
     align-items: center;
@@ -150,8 +140,7 @@ const subName = "Estilo Jalisco";
     background-repeat: no-repeat;
     object-fit: cover;
 
-    border-top: #F2D732 6px solid;
-    
+    border-top: #f2d732 6px solid;
   }
   .section-title {
     text-align: center;
@@ -159,7 +148,6 @@ const subName = "Estilo Jalisco";
     font-weight: 700;
     margin: 5px 0;
     color: #900020;
-    
 
     /* width: 100%;
       max-width: 1000px; */
@@ -221,14 +209,12 @@ const subName = "Estilo Jalisco";
     /* -webkit-text-stroke: 0.5px rgb(255, 255, 255); */
   }
 
- 
-   .box {
+  .box {
     height: 100vh;
     width: 100%;
     /* padding: 16px; */
     background: rgb(118, 4, 4);
     /* border-radius: 16px; */
-   
   }
 
   .card-container {
@@ -297,7 +283,7 @@ const subName = "Estilo Jalisco";
     color: #fff;
     /* box-shadow: 0 6px 16px rgba(122, 121, 121, 0.7); */
 
-    background-color: #FFC857;
+    background-color: #ffc857;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -310,10 +296,9 @@ const subName = "Estilo Jalisco";
   .view-more-btn:focus {
     background-color: #ffffff;
     color: #d79d28;
-    border: #FFC857 4px solid;
+    border: #ffc857 4px solid;
     outline: none;
     box-shadow: 0 6px 16px rgba(190, 194, 58, 0.7);
-    
   }
 
   .review-card {
@@ -338,7 +323,6 @@ const subName = "Estilo Jalisco";
     font-weight: bold;
     color: #ffb300;
     font-weight: 600;
-
   }
 
   .review-controls {
@@ -372,5 +356,3 @@ const subName = "Estilo Jalisco";
     }
   }
 </style>
-
-
