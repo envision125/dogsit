@@ -1,5 +1,8 @@
 ---
 
+ import { Image } from 'astro:assets'
+
+
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
 import Slider from "../components/Slider.astro";
@@ -18,7 +21,8 @@ const subName = "Estilo Jalisco";
 ---
 
 <div class="banner-image">
-  <img src={banneIMG.src} alt="Background Image" />
+  <Image src={banneIMG} alt="A bird sitting on a nest of eggs." />
+
   <div class="banner-text">
     <h1>{resturantName}</h1>
     <p>
@@ -42,7 +46,8 @@ const subName = "Estilo Jalisco";
         tabindex="0"
         aria-label="Mountain landscape image"
       >
-        <img src={torta.src} />
+        <Image src={torta} alt="A description of my image." />
+        
         <!-- <div class="card-caption">Mountain Landscape</div> -->
       </article>
       <article
@@ -51,7 +56,7 @@ const subName = "Estilo Jalisco";
         tabindex="0"
         aria-label="Forest pathway image"
       >
-        <img src={slideDos.src} />
+        <Image src={slideDos} alt="A description of my image." />
         <!-- <div class="card-caption">Forest Pathway</div> -->
       </article>
       <article
@@ -60,7 +65,7 @@ const subName = "Estilo Jalisco";
         tabindex="0"
         aria-label="City skyline at dusk image"
       >
-        <img src={slideTres.src} />
+        <Image src={slideTres} alt="A description of my image." />
 
         <!-- <div class="card-caption">City Skyline</div> -->
       </article>
