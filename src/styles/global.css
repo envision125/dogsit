@@ -1,5 +1,8 @@
 /* Styles Applied Across All Apps Views */
 
+@import "tailwindcss";
+
+
 :root {
   --button-bg: #007bff;
   --button-text: #ffffff;
