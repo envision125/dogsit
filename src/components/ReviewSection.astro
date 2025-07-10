@@ -1,15 +1,15 @@
 ---
 const reviews = [
   {
-    text: "Want some amazing authentic Mexican food? This gem is a must",
+    text: "Doggy Day Care",
     author: "Lily"
   },
   {
-    text: "Very good food, I got the torta ahogada mixta and it did not disappoint.",
+    text: "Drop-In Visits",
     author: "Josh "
   },
   {
-    text: "Muy buenas las tortas y  todo lo demás también. 100% recomendado.",
+    text: "Dog Walking",
     author: "Miguel"
   }
 ];
@@ -18,16 +18,16 @@ const reviews = [
 <section class="color-section" aria-label="Customer Reviews">
 
   <!-- // Section FIX -->
-  <h2 class="review-title">Amazing Reviews</h2>
+  <h2 class="review-title">Great Services</h2>
   <div class="card-container" role="list">
     {reviews.map((review) => (
       <article class="review-card" role="listitem" tabindex="0" aria-label={`Review by ${review.author}`}>
+        
+        <p class="review-text">{review.text}</p>
+        
         <div class="rating" aria-label="5 out of 5 stars">
           ⭐⭐⭐⭐⭐
         </div>
-        <p class="review-text">"{review.text}"</p>
-        <p class="review-author">- {review.author}</p>
-        
         
       </article>
 
