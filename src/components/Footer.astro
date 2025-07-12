@@ -1,8 +1,8 @@
 ---
 import Social from "./Social.astro";
-import bgLogo from "../assets/logoicon.jpg";
+import bgLogo from "../assets/paw.jpg";
 
-const address1 = "4749 International Blvd, Oakland, CA";
+const address1 = "San Francisco , CA and around the Bay Area";
 const address2 = "3355 Santa Rosa Ave., Santa Rosa, CA";
 ---
 
@@ -13,8 +13,8 @@ const address2 = "3355 Santa Rosa Ave., Santa Rosa, CA";
     align-items: center;
     padding: 1rem 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-top: #8C001A 8px solid;
-    background-color: #fff;
+
+    background-color: #410333;
   }
   footer > div {
     display: flex;
@@ -50,7 +50,6 @@ const address2 = "3355 Santa Rosa Ave., Santa Rosa, CA";
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 1.2rem;
-    border-bottom: 2px solid #dedede;
     padding-bottom: 5px;
     user-select: none;
   }
@@ -80,23 +79,20 @@ const address2 = "3355 Santa Rosa Ave., Santa Rosa, CA";
 
   <div class="right-section">
     <div class="location">
-      <h4>Santa Rosa, CA</h4>
-      <div class="address" aria-label="Address for location 1">
-        {address1}<br />
-      </div>
-      <div class="hours" aria-label="Hours for location 1">
-        Mon - Fri: 9am - 6pm<br />
-      </div>
-    </div>
-
-    <div class="location">
-      <h4>Oakland, CA</h4>
-      <div class="address" aria-label="Address for location 2">
-        {address2}<br />
-      </div>
-      <div class="hours" aria-label="Hours for location 2">
-        Mon - Sun: 9am - 6pm<br />
-      </div>
+      <h4>
+        Contact US<h4>
+          <hr>
+          <div class="hours" aria-label="Hours for location 1">
+            Email:<br />
+          </div>
+          <div class="hours" aria-label="Hours for location 1">
+            Phone:<br />
+          </div>
+          <div class="address" aria-label="Address for location 1">
+            {address1}
+          </div>
+        </h4>
+      </h4>
     </div>
   </div>
 </footer>

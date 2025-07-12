@@ -1,22 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+import { Image } from 'astro:assets';
+import rocket from '../assets/bg-pets.jpg';
 
 ---
 <Layout>
  <!-- Hero Section -->
     <section class="gradient-bg py-20">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2">
-                <h1 class="text-4xl md:text-5xl font-bold text-purple-900 mb-6">Galaxy-Class Care for Your Canine Companion</h1>
-                <p class="text-lg text-purple-800 mb-8">Our cosmic-trained sitters provide stellar care while you're exploring the universe (or just at work).</p>
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center ">
+            <div class="md:w-1/2 animate-slide-in-left">
+                <h1 class="text-4xl md:text-5xl font-bold text-purple-900 mb-6 ">Paw Care</h1>
+                <p class="text-lg text-purple-800 mb-8">Professional, loving care for your furry family members. We treat every dog like our own, giving you peace of mind while you're away.</p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#contact" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-center shadow-lg transform hover:scale-105 transition duration-300">Launch Booking</a>
-                    <a href="#features" class="border-2 border-purple-600 text-purple-600 font-bold py-3 px-8 rounded-lg hover:bg-purple-50 text-center transition duration-300">Explore Features</a>
+                    <a href="#contact" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-center shadow-lg transform hover:scale-105 transition duration-300">Contact Us</a>
+                    <a href="#features" class="border-2 border-purple-600 text-purple-600 font-bold py-3 px-8 rounded-lg hover:bg-purple-50 text-center transition duration-300">Services</a>
                 </div>
             </div>
             <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7fb4d3f6-c5e9-474d-acb3-083881048e2a.png" alt="Astronaut playing with dogs in a futuristic space-themed dog park" class="max-w-md rounded-lg shadow-xl">
+                <!-- <img src="" alt="Astronaut playing with dogs in a futuristic space-themed dog park" class="max-w-md rounded-lg shadow-xl"> -->
+                <Image src={rocket} alt="Rocket launching into space" width={500} height={400} />
             </div>
         </div>
     </section>
@@ -36,15 +39,62 @@ import '../styles/global.css';
                     <svg class="w-8 h-8 text-purple-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
                     <span class="text-xl font-bold text-purple-800">Pet-Friendly</span>
                 </div>
+                 <div class="flex items-center">
+                    <svg class="w-8 h-8 text-purple-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-xl font-bold text-purple-800">Years Of Experienced</span>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+        <!-- Animated Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-purple-900 mb-4 animate-fade-in">Our Pet Services</h2>
+            <p class="text-lg text-center text-purple-800 mb-16 max-w-2xl mx-auto animate-fade-in animate-delay-100">Comprehensive care solutions tailored to your dog's or cat's needs and your schedule. Every service comes complete with peace of mind.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 with animation -->
+                <div class="bg-purple-50 p-6 rounded-xl shadow-md hover-grow transition-all duration-300 transform hover:shadow-xl animate-slide-in-left animate-delay-100">
+                    <div class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto animate-pulse-slow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-purple-600">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 4.5l9 5.25v9a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18.75v-9z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 22.5v-6h6v6" />
+                        </svg>
+                                                <!-- <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg> -->
+
+
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-3 text-shadow-purple-400">Dog Sitting</h3>
+                    <p class="text-gray-700 text-center">In-home care while you're away for work or vacation. Your pet is our priority. </p>
+                </div>
+                
+                <!-- Feature 2 with animation -->
+                <div class="bg-purple-50 p-6 rounded-xl shadow-md hover-grow transition-all duration-300 transform hover:shadow-xl animate-slide-in-left animate-delay-200">
+                    <div class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto animate-pulse-slow animate-delay-200">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-3">Dog Walking</h3>
+                    <p class="text-gray-700 text-center">Regular walks to keep your dog healthy and happy. Perfect for busy schedules or when you can't make it home. </p>
+                </div>
+                
+                <!-- Feature 3 with animation -->
+                <div class="bg-purple-50 p-6 rounded-xl shadow-md hover-grow transition-all duration-300 transform hover:shadow-xl animate-slide-in-left animate-delay-300">
+                    <div class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto animate-pulse-slow animate-delay-300">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2m5-11a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5l2 2h5z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-3">24/7 Care</h3>
+                    <p class="text-gray-700 text-center">24/7 monitoring, we never lay an eye of your pet.</p>
+                </div>
             </div>
         </div>
     </section>
 
      <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
+    <section id="services" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-purple-900 mb-4">Our Cosmic Services</h2>
-            <p class="text-lg text-center text-purple-800 mb-16 max-w-2xl mx-auto">We offer services that are truly out of this world for your furry astronauts.</p>
+            <h2 class="text-3xl font-bold text-center text-purple-900 mb-4">Happy Dogs, Happy Owners</h2>
+            <p class="text-lg text-center text-purple-800 mb-16 max-w-2xl mx-auto">See the joy and love we bring to every furry friend in our care. These moments capture the essence of what makes PawCare special.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
@@ -102,6 +152,9 @@ import '../styles/global.css';
             </div>
         </div>
     </section>
+
+
+    
     
 </Layout>
 <style>
