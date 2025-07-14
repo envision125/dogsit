@@ -1,9 +1,8 @@
 ---
 import astroLogo from "../assets/logoicon.jpg";
-import Social from "./Social.astro";
-import { dashLink, SC_FB_TAG, SC_IG_TAG, SC_TK_TAG } from "../consts";
+import { dashLink} from "../consts";
 ---
-
+<!-- 
 <div class="nav-container">
   <div class="nav-logo">
     <a href="https://astro.build"
@@ -24,4 +23,96 @@ import { dashLink, SC_FB_TAG, SC_IG_TAG, SC_TK_TAG } from "../consts";
 
     <a href={dashLink}>Services</a>
   </div>
-</div>
+</div> -->
+
+    <style>
+        /* Custom styles to enhance the Tailwind navbar */
+        .nav-logo-container {
+            transition: transform 0.3s ease;
+        }
+        .nav-logo-container:hover {
+            transform: scale(1.05);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .mobile-menu {
+            transition: all 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center nav-logo-container">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/041614c9-7f60-4bf3-83d9-a80b19f1d780.png" alt="Company logo with blue and white color scheme showing a rocket icon" class="h-8 w-auto">
+                    <span class="ml-2 text-xl font-bold text-gray-800">AstroSite</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/home/" class="nav-link text-gray-800 hover:text-blue-500 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="/about/" class="nav-link text-gray-800 hover:text-blue-500 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="/client/" class="nav-link text-gray-800 hover:text-blue-500 px-3 py-2 text-sm font-medium">Clients</a>
+                    <a href="/services/" class="nav-link text-gray-800 hover:text-blue-500 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="#" class="nav-link text-gray-800 hover:text-blue-500 px-3 py-2 text-sm font-medium">Contact</a>
+                    
+                    <!-- CTA Button -->
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-800 hover:text-blue-500 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-gray-50 shadow-lg">
+            <div class="px-4 py-2 space-y-2">
+                <a href="/" class="block text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded-md px-3 py-2 text-sm font-medium">Home</a>
+                <a href="/about/" class="block text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded-md px-3 py-2 text-sm font-medium">Features</a>
+                <a href="/services/" class="block text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded-md px-3 py-2 text-sm font-medium">Pricing</a>
+                <a href="/clients/" class="block text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded-md px-3 py-2 text-sm font-medium">About</a>
+                <a href="#" class="block text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 mt-2">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+    <script src="../scripts/demo.js"></script>
+
+
+   
+
+
+
+
