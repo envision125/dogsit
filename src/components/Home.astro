@@ -1,0 +1,327 @@
+---
+import { Image } from "astro:assets";
+
+import ImageSlideSection from "./ImageSlideSection.astro";
+import banneIMG from "../assets/bg-nak.jpg";
+
+import torta from "../assets/torta.jpg";
+import slideDos from "../assets/trestacos.jpeg";
+import slideTres from "../assets/huevos.jpg";
+import Review from "../components/ReviewSection.astro";
+
+const resturantName = "Pet's Best Friend";
+const subName = "Treating every pet like family since 2023";
+---
+
+<div class="banner-image">
+  <Image src={banneIMG} alt="A bird sitting on a nest of eggs." />
+
+  <div class="banner-text">
+    <h1>{resturantName}</h1>
+    <p>
+      {subName}
+    </p>
+  </div>
+</div>
+<main>
+  <ImageSlideSection
+    title="Doggy Day Care"
+    description="The best place for your furry friends"
+  />
+  <Review />
+  <section class="">
+    <h2 class="section-title">Popular Plates</h2>
+    <div class="title-underline"></div>
+    <div class="card-container" role="list" aria-label="Image cards">
+      <article
+        class="card"
+        role="listitem"
+        tabindex="0"
+        aria-label="Mountain landscape image"
+      >
+        <Image src={slideDos} alt="A description of my image." />
+
+        <!-- <div class="card-caption">Mountain Landscape</div> -->
+      </article>
+      <article
+        class="card"
+        role="listitem"
+        tabindex="0"
+        aria-label="Forest pathway image"
+      >
+        <Image src={slideDos} alt="A description of my image." />
+        <!-- <div class="card-caption">Forest Pathway</div> -->
+      </article>
+      <article
+        class="card"
+        role="listitem"
+        tabindex="0"
+        aria-label="City skyline at dusk image"
+      >
+        <Image src={slideTres} alt="A description of my image." />
+
+        <!-- <div class="card-caption">City Skyline</div> -->
+      </article>
+    </div>
+    <button
+      class="view-more-btn"
+      type="button"
+      aria-label="View more destinations"
+      onclick="location.href='about'"
+    >
+      VIEW MORE
+    </button>
+  </section>
+</main>
+
+
+
+<script>
+  import "../scripts/rev.js";
+</script>
+
+<style>
+  .checked {
+    color: orange;
+    align-items: center;
+    display: inline-block;
+    justify-content: center;
+  }
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(100px);
+  }
+
+  .banner-image {
+    position: relative;
+  }
+
+  .banner-image img {
+    vertical-align: middle;
+    width: 100%;
+    height: 100;
+    box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    border-top: #f2d732 6px solid;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 5px 0;
+    color: #900020;
+
+    /* width: 100%;
+      max-width: 1000px; */
+  }
+  .color-section {
+    background-color: #900020;
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+    width: 90%;
+  }
+
+  .banner-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    text-transform: uppercase;
+  }
+
+  .banner-text h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.75);
+
+    -webkit-text-stroke: 2px rgb(117, 0, 0);
+  }
+  .banner-text p {
+    font-size: clamp(1rem, 3vw, 2rem);
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 2px 2px 12px rgba(84, 83, 83, 0.694);
+    background: linear-gradient(14deg, #000000 0%, #ff0000 100%);
+
+    /* -webkit-text-stroke: 0.5px rgb(255, 255, 255); */
+  }
+
+  .box {
+    height: 100vh;
+    width: 100%;
+    /* padding: 16px; */
+    background: rgb(118, 4, 4);
+    /* border-radius: 16px; */
+  }
+
+  .card-container {
+    display: flex;
+    gap: 24px;
+    max-width: 1000px;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+  .card-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #83a40b;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+  }
+  .card {
+    margin-top: 16px;
+    flex: 1 1 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(255, 42, 42, 0.432);
+    overflow: hidden;
+    cursor: pointer;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: #003f8c 2px solid;
+  }
+  .card:hover,
+  .card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    outline: none;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+  .card-caption {
+    padding: 14px 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .view-more-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    /* box-shadow: 0 6px 16px rgba(122, 121, 121, 0.7); */
+
+    background-color: #ffc857;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      box-shadow 0.3s ease;
+    text-align: center;
+  }
+  .view-more-btn:hover,
+  .view-more-btn:focus {
+    background-color: #ffffff;
+    color: #d79d28;
+    border: #ffc857 4px solid;
+    outline: none;
+    box-shadow: 0 6px 16px rgba(190, 194, 58, 0.7);
+  }
+
+  .review-card {
+    background: rgb(255, 255, 255);
+    padding: 2rem;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .review-text {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    color: rgb(122, 6, 6);
+    font-weight: 900;
+  }
+
+  .review-author {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffb300;
+    font-weight: 600;
+  }
+
+  .review-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+
+  .review-controls button {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .review-controls button:hover {
+    background: #0056b3;
+  }
+
+  /* Responsive layout */
+  @media (max-width: 850px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      width: 90vw;
+      max-width: 400px;
+    }
+  }
+</style>
