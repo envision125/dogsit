@@ -3,17 +3,21 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 import { Image } from 'astro:assets';
 import rocket from '../assets/bg-pets.jpg';
+import { SITE_TITLE } from '../consts';
+
+
+
 
 ---
  <!-- Hero Section -->
     <section class="gradient-bg py-20">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center ">
             <div class="md:w-1/2 animate-slide-in-left">
-                <h1 class="text-4xl md:text-5xl font-bold text-purple-900 mb-6 ">Paw Care</h1>
-                <p class="text-lg text-purple-800 mb-8">Professional, loving care for your furry family members. We treat every dog like our own, giving you peace of mind while you're away.</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-pink-500 mb-6 ">{SITE_TITLE}</h1>
+                <p class="text-lg text-pink-400 mb-8">Professional, loving care for your furry family members. We treat every dog like our own, giving you peace of mind while you're away.</p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#contact" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-center shadow-lg transform hover:scale-105 transition duration-300">Contact Us</a>
-                    <a href="#features" class="border-2 border-purple-600 text-purple-600 font-bold py-3 px-8 rounded-lg hover:bg-purple-50 text-center transition duration-300">Services</a>
+                    <a href="#contact" class="bg-pink-200 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-center shadow-lg transform hover:scale-105 transition duration-300">Contact Us</a>
+                    <a href="#features" class="border-2 border-pink-300 text-pink-300 font-bold py-3 px-8 rounded-lg hover:bg-purple-50 text-center transition duration-300">Services</a>
                 </div>
             </div>
             <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
@@ -161,6 +165,6 @@ import rocket from '../assets/bg-pets.jpg';
             background-color: #faf5ff;
         }
         .gradient-bg {
-            background: linear-gradient(135deg, #e9d5ff 0%, #f3e8ff 100%);
+            background: linear-gradient(135deg, #fbd5ff 0%, #fde8ff 100%);
         }
 </style>
