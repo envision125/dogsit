@@ -1,20 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-const mission=`This journey began with a simple truth: our pets are family. When I couldn’t find the kind of loving, reliable care I wanted for my own animals, I decided to create it myself.
-
-What started as helping out friends and neighbors quickly grew into a full-time passion. I’ve always believed that dogs and cats deserve more than just food and walks—they deserve connection, comfort, and genuine companionship. That’s the heart behind everything we do.
-
-we treat every pet like our own. Whether it’s a playful pup or a quiet soul, we tailor our care to fit each animal’s unique personality and needs. From long walks and belly rubs to cozy cuddle sessions, we’re here to make sure your pets feel safe, loved, and happy while you’re away.
-
-`;
+const bio = `Welcome to Sunnyside Day Care! We are passionate about providing loving and reliable care for your furry friends. 
+Our mission is to create a safe and fun environment where dogs can feel at home while you're away. With years of experience and a 
+dedicated team, we ensure your pets receive the best attention and care possible. Thank you for trusting us with your beloved companions.`;
 ---
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
   body {
     font-family: "Poppins", sans-serif;
-    background-color: #fef6f6;
   }
   .hero {
     display: flex;
@@ -31,7 +25,7 @@ we treat every pet like our own. Whether it’s a playful pup or a quiet soul, w
 
     object-fit: contain;
     border-radius: 8px;
-    box-shadow: red 0px 5px 15px;
+    box-shadow: rgb(125, 124, 124) 0px 5px 15px;
   }
 
   .about-text {
@@ -46,42 +40,40 @@ we treat every pet like our own. Whether it’s a playful pup or a quiet soul, w
 
 <Layout>
   <section class="hero">
-    <img src="/src/assets/paw.jpg" alt="Hero Image" />
+    <img src="/src/assets/aboutus.jpg" alt="Hero Image" />
   </section>
   <section class="about-text">
     <!-- <body class="min-h-screen flex items-center justify-center p-4"> -->
-      <div class="text-center">
-        <!-- Main Pink Title -->
-        <h1
-          class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600 animate-pulse"
+    <div class="text-center">
+      <!-- Main Pink Title -->
+      <h1
+        class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600 animate-pulse"
+      >
+        How It All Started.
+      </h1>
+
+      <!-- Decorative elements -->
+      <div class="flex justify-center space-x-4 mb-10">
+        <div class="w-4 h-4 rounded-full bg-pink-300 animate-bounce"></div>
+        <div
+          class="w-4 h-4 rounded-full bg-pink-400 animate-bounce"
+          style="animation-delay: 0.2s;"
         >
-         How It All Started.
-        </h1>
-
-       
-
-        <!-- Decorative elements -->
-        <div class="flex justify-center space-x-4 mb-10">
-          <div class="w-4 h-4 rounded-full bg-pink-300 animate-bounce"></div>
-          <div
-            class="w-4 h-4 rounded-full bg-pink-400 animate-bounce"
-            style="animation-delay: 0.2s;"
-          >
-          </div>
-          <div
-            class="w-4 h-4 rounded-full bg-pink-500 animate-bounce"
-            style="animation-delay: 0.4s;"
-          >
-          </div>
         </div>
-         <!-- Subtitle with softer pink -->
-        <h2 class="text-xl md:text-2xl text-pink-500 mb-8">
-          My Passion For Dog Sitting.
-        </h2>
-        <p>{mission}</p>
+        <div
+          class="w-4 h-4 rounded-full bg-pink-500 animate-bounce"
+          style="animation-delay: 0.4s;"
+        >
+        </div>
+      </div>
+      <!-- Subtitle with softer pink -->
+      <h2 class="text-xl md:text-2xl text-pink-500 mb-8">
+        My Passion For Dog Sitting.
+      </h2>
+      <p>{bio}</p>
 
-        <!-- Color palette showcase -->
-        <!-- <div class="flex flex-col items-center">
+      <!-- Color palette showcase -->
+      <!-- <div class="flex flex-col items-center">
           <p class="text-gray-600 mb-4">Pink color palette used:</p>
           <div class="flex flex-wrap justify-center gap-2 max-w-md">
             <div class="w-10 h-10 rounded bg-pink-100"></div>
@@ -95,8 +87,26 @@ we treat every pet like our own. Whether it’s a playful pup or a quiet soul, w
             <div class="w-10 h-10 rounded bg-pink-900"></div>
           </div>
         </div> -->
-      </div>
+    </div>
     <!-- </body> -->
   </section>
+  <div class="contact-button-section" style="text-align: center; margin: 2rem 0;">
+    <button
+      style="
+        background: linear-gradient(90deg, #ec4899, #db2777);
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 9999px;
+        cursor: pointer;
+        font-size: 1.25rem;
+        transition: background 0.3s ease;
+      "
+      onmouseover="this.style.background='linear-gradient(90deg, #db2777, #ec4899)'"
+      onmouseout="this.style.background='linear-gradient(90deg, #ec4899, #db2777)'"
+    >
+      Contact Us Now
+    </button>
+  </div>
 </Layout>
-
