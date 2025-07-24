@@ -1,170 +1,551 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
-import { Image } from 'astro:assets';
-import rocket from '../assets/bg-pets.jpg';
-import { SITE_TITLE } from '../consts';
-
-
-
-
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import { Image } from "astro:assets";
+import rocket from "../assets/bg-aboutus.jpg";
+import { SITE_TITLE } from "../consts";
 ---
- <!-- Hero Section -->
-    <section class="gradient-bg py-20">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center ">
-            <div class="md:w-1/2 animate-slide-in-left">
-                <h1 class="text-4xl md:text-5xl font-bold text-pink-500 mb-6 ">{SITE_TITLE}</h1>
-                <p class="text-lg text-pink-400 mb-8">Professional, loving care for your furry family members. We treat every dog like our own, giving you peace of mind while you're away.</p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#contact" class="bg-pink-200 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-center shadow-lg transform hover:scale-105 transition duration-300">Contact Us</a>
-                    <a href="#features" class="border-2 border-pink-300 text-pink-300 font-bold py-3 px-8 rounded-lg hover:bg-purple-50 text-center transition duration-300">Services</a>
-                </div>
-            </div>
-            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-                <!-- <img src="" alt="Astronaut playing with dogs in a futuristic space-themed dog park" class="max-w-md rounded-lg shadow-xl"> -->
-                <Image src={rocket} alt="Rocket launching into space" width={500} height={400} />
-            </div>
-        </div>
-    </section>
-    <!-- Certification Icon's Section -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                <div class="flex items-center">
-                    <svg class="w-8 h-8 text-purple-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    <span class="text-xl font-bold text-purple-800">Certified Space Safety</span>
-                </div>
-                <div class="flex items-center">
-                    <svg class="w-8 h-8 text-purple-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    <span class="text-xl font-bold text-purple-800">5- Paw Rating</span>
-                </div>
-                <div class="flex items-center">
-                    <svg class="w-8 h-8 text-purple-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    <span class="text-xl font-bold text-purple-800">Pet-Friendly</span>
-                </div>
-                 <div class="flex items-center">
-                    <svg class="w-8 h-8 text-purple-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    <span class="text-xl font-bold text-purple-800">Years Of Experienced</span>
-                </div>
-               
-            </div>
-        </div>
-    </section>
-        <!-- Animated Services Section -->
-    <section id="features" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-purple-900 mb-4 animate-fade-in">Our Pet Services</h2>
-            <p class="text-lg text-center text-purple-800 mb-16 max-w-2xl mx-auto animate-fade-in animate-delay-100">Comprehensive care solutions tailored to your dog's or cat's needs and your schedule. Every service comes complete with peace of mind.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Feature 1 with animation -->
-                <div class="bg-purple-50 p-6 rounded-xl shadow-md hover-grow transition-all duration-300 transform hover:shadow-xl animate-slide-in-left animate-delay-100">
-                    <div class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto animate-pulse-slow">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-purple-600">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 4.5l9 5.25v9a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18.75v-9z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 22.5v-6h6v6" />
-                        </svg>
-                                                <!-- <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg> -->
 
+<!-- Hero Section -->
+<section class="gradient-bg py-20">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2 animate-slide-in-left">
+      <h1 class="text-4xl md:text-5xl font-bold text-pink-500 mb-6">
+        {SITE_TITLE}
+      </h1>
+      <p class="text-lg text-pink-400 mb-8">
+        Professional, loving care for your furry family members. We treat every
+        dog like our own, giving you peace of mind while you're away.
+      </p>
+      <div
+        class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+      >
+        <a
+          href="#contact"
+          class="bg-pink-200 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-center shadow-lg transform hover:scale-105 transition duration-300"
+          >Contact Us</a
+        >
+        <a
+          href="#features"
+          class="border-2 border-pink-300 text-pink-300 font-bold py-3 px-8 rounded-lg hover:bg-purple-50 text-center transition duration-300"
+          >Services</a
+        >
+      </div>
+    </div>
+    <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+      <!-- <img src="src/assets/bg-aboutus.jpg" alt="Astronaut playing with dogs in a futuristic space-themed dog park" class="max-w-md rounded-lg shadow-xl"> -->
+      <Image
+        src={rocket}
+        alt="Sunnyside Dog Daycare"
+        class="shadow-xl rounded-lg"
+      />
+    </div>
+  </div>
+</section>
+<!-- Certification Icon's Section -->
+<section class="py-12 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+      <div class="flex items-center">
+        <svg
+          class="w-8 h-8 text-purple-600 mr-2"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd"></path></svg
+        >
+        <span class="text-xl font-bold text-purple-800"
+          >Certified Space Safety</span
+        >
+      </div>
+      <div class="flex items-center">
+        <svg
+          class="w-8 h-8 text-purple-600 mr-2"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill-rule="evenodd"
+            d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd"></path></svg
+        >
+        <span class="text-xl font-bold text-purple-800">5- Paw Rating</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Animated Services Section -->
+<section id="features" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <h2
+      class="text-3xl font-bold text-center text-purple-900 mb-4 animate-fade-in"
+    >
+      Our Pet Services
+    </h2>
+    <p
+      class="text-lg text-center text-purple-800 mb-16 max-w-2xl mx-auto animate-fade-in animate-delay-100"
+    >
+      Comprehensive care solutions tailored to your dog's or cat's needs and
+      your schedule. Every service comes complete with peace of mind.
+    </p>
 
-                    </div>
-                    <h3 class="text-xl font-semibold text-center mb-3 text-shadow-purple-400">Dog Sitting</h3>
-                    <p class="text-gray-700 text-center">In-home care while you're away for work or vacation. Your pet is our priority. </p>
-                </div>
-                
-                <!-- Feature 2 with animation -->
-                <div class="bg-purple-50 p-6 rounded-xl shadow-md hover-grow transition-all duration-300 transform hover:shadow-xl animate-slide-in-left animate-delay-200">
-                    <div class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto animate-pulse-slow animate-delay-200">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-center mb-3">Dog Walking</h3>
-                    <p class="text-gray-700 text-center">Regular walks to keep your dog healthy and happy. Perfect for busy schedules or when you can't make it home. </p>
-                </div>
-                
-                <!-- Feature 3 with animation -->
-                <div class="bg-purple-50 p-6 rounded-xl shadow-md hover-grow transition-all duration-300 transform hover:shadow-xl animate-slide-in-left animate-delay-300">
-                    <div class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto animate-pulse-slow animate-delay-300">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2m5-11a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5l2 2h5z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-center mb-3">24/7 Care</h3>
-                    <p class="text-gray-700 text-center">24/7 monitoring, we never lay an eye of your pet.</p>
-                </div>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Feature 1 with animation -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover-grow transition-all duration-300 transform hover:shadow-xl animate-slide-in-left animate-delay-100"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto animate-pulse-slow"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-8 h-8 text-purple-600"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 9.75L12 4.5l9 5.25v9a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18.75v-9z"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 22.5v-6h6v6"></path>
+          </svg>
+          <!-- <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg> -->
         </div>
-    </section>
+        <h3
+          class="text-xl font-semibold text-center mb-3 text-shadow-purple-400"
+        >
+          Dog Sitting
+        </h3>
+        <p class="text-gray-700 text-center">
+          In-home care while you're away for work or vacation. Your pet is our
+          priority.
+        </p>
+      </div>
 
-     <!-- Services Section -->
-    <section id="services" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-purple-900 mb-4">Happy Dogs, Happy Owners</h2>
-            <p class="text-lg text-center text-purple-800 mb-16 max-w-2xl mx-auto">See the joy and love we bring to every furry friend in our care. These moments capture the essence of what makes PawCare special.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Zero-G Boarding</h3>
-                    <p class="text-purple-800">Our space-themed facility provides 24/7 care with gravity-free play areas for your pup's comfort.</p>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Daily Planet Visits</h3>
-                    <p class="text-purple-800">We'll beam to your location for in-home care, keeping routines consistent while you're away.</p>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Hyperdrive Walks</h3>
-                    <p class="text-purple-800">Light-speed exercise sessions through scenic cosmic routes tailored to your dog's energy level.</p>
-                </div>
-                <!-- Service 4 -->
-                <div class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Starlight Overnight</h3>
-                    <p class="text-purple-800">Sleepovers under the stars (actually safely indoors) with our experienced overnight sitters.</p>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">VIP Nebula Package</h3>
-                    <p class="text-purple-800">Our premium service includes spa treatments, personalized training, and gourmet cosmic cuisine.</p>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 002 2h3a2 2 0 002-2V7a2 2 0 00-2-2H5zm12 2a2 2 0 012 2v3a2 2 0 01-2 2h-3a2 2 0 01-2-2V7a2 2 0 012-2h3z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Mission Control</h3>
-                    <p class="text-purple-800">24/7 monitoring with live video feed so you can check on your pup anywhere in the galaxy.</p>
-                </div>
-            </div>
+      <!-- Feature 2 with animation -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover-grow transition-all duration-300 transform hover:shadow-xl animate-slide-in-left animate-delay-200"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto animate-pulse-slow animate-delay-200"
+        >
+          <svg
+            class="w-8 h-8 text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+            ></path></svg
+          >
         </div>
-    </section>
-    <style>
-    :root {
-            --primary: #6d28d9;
-            --primary-light: #8b5cf6;
-        }
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: #faf5ff;
-        }
-        .gradient-bg {
-            background: linear-gradient(135deg, #fbd5ff 0%, #fde8ff 100%);
-        }
+        <h3 class="text-xl font-semibold text-center mb-3">Dog Walking</h3>
+        <p class="text-gray-700 text-center">
+          Regular walks to keep your dog healthy and happy. Perfect for busy
+          schedules or when you can't make it home.
+        </p>
+      </div>
+
+      <!-- Feature 3 with animation -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover-grow transition-all duration-300 transform hover:shadow-xl animate-slide-in-left animate-delay-300"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 mx-auto animate-pulse-slow animate-delay-300"
+        >
+          <svg
+            class="w-8 h-8 text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 5v2m0 4v2m0 4v2m5-11a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5l2 2h5z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-3">24/7 Care</h3>
+        <p class="text-gray-700 text-center">
+          24/7 monitoring, we never lay an eye of your pet.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dog Client's Section -->
+<section id="services" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-purple-900 mb-4">
+      Happy Dogs, Happy Owners
+    </h2>
+    <p class="text-lg text-center text-purple-800 mb-16 max-w-2xl mx-auto">
+      See the joy and love we bring to every furry friend in our care. These
+      moments capture the essence of what makes PawCare special.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Service 1 -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4"
+        >
+          <!-- <img src="src/assets/bg-aboutus.jpg" alt="Astronaut playing with dogs in a futuristic space-themed dog park" class="max-w-md rounded-lg shadow-xl"> -->
+
+          <svg
+            class="w-8 h-8 text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Zero-G Boarding</h3>
+        <p class="text-purple-800">
+          Our space-themed facility provides 24/7 care with gravity-free play
+          areas for your pup's comfort.
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Daily Planet Visits</h3>
+        <p class="text-purple-800">
+          We'll beam to your location for in-home care, keeping routines
+          consistent while you're away.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg
+          >
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Hyperdrive Walks</h3>
+        <p class="text-purple-800">
+          Light-speed exercise sessions through scenic cosmic routes tailored to
+          your dog's energy level.
+        </p>
+      </div>
+      <!-- Service 4 -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Starlight Overnight</h3>
+        <p class="text-purple-800">
+          Sleepovers under the stars (actually safely indoors) with our
+          experienced overnight sitters.
+        </p>
+      </div>
+
+      <!-- Service 5 -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-xl font-semibold mb-3">VIP Nebula Package</h3>
+        <p class="text-purple-800">
+          Our premium service includes spa treatments, personalized training,
+          and gourmet cosmic cuisine.
+        </p>
+      </div>
+
+      <!-- Service 6 -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 002 2h3a2 2 0 002-2V7a2 2 0 00-2-2H5zm12 2a2 2 0 012 2v3a2 2 0 01-2 2h-3a2 2 0 01-2-2V7a2 2 0 012-2h3z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Mission Control</h3>
+        <p class="text-purple-800">
+          24/7 monitoring with live video feed so you can check on your pup
+          anywhere in the galaxy.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- <img src="src/assets/bg-aboutus.jpg" alt="Astronaut playing with dogs in a futuristic space-themed dog park" class="max-w-md rounded-lg shadow-xl"> -->
+
+<!-- Dog Client's Section -->
+<section id="services" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-purple-900 mb-4">
+      Happy Dogs, Happy Owners
+    </h2>
+    <p class="text-lg text-center text-purple-800 mb-16 max-w-2xl mx-auto">
+      See the joy and love we bring to every furry friend in our care. These
+      moments capture the essence of what makes PawCare special.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Dog 1 -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+      >
+        <img
+          src="src/assets/dog1.jpg"
+          alt="Astronaut playing with dogs in a futuristic space-themed dog park"
+          class="max-w-md rounded-lg shadow-xl"
+        />
+      </div>
+
+      <!-- Dog 2 -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Daily Planet Visits</h3>
+        <p class="text-purple-800">
+          We'll beam to your location for in-home care, keeping routines
+          consistent while you're away.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg
+          >
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Hyperdrive Walks</h3>
+        <p class="text-purple-800">
+          Light-speed exercise sessions through scenic cosmic routes tailored to
+          your dog's energy level.
+        </p>
+      </div>
+      <!-- Service 4 -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Starlight Overnight</h3>
+        <p class="text-purple-800">
+          Sleepovers under the stars (actually safely indoors) with our
+          experienced overnight sitters.
+        </p>
+      </div>
+
+      <!-- Service 5 -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-xl font-semibold mb-3">VIP Nebula Package</h3>
+        <p class="text-purple-800">
+          Our premium service includes spa treatments, personalized training,
+          and gourmet cosmic cuisine.
+        </p>
+      </div>
+
+      <!-- Service 6 -->
+      <div
+        class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+      >
+        <div
+          class="bg-purple-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 002 2h3a2 2 0 002-2V7a2 2 0 00-2-2H5zm12 2a2 2 0 012 2v3a2 2 0 01-2 2h-3a2 2 0 01-2-2V7a2 2 0 012-2h3z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Mission Control</h3>
+        <p class="text-purple-800">
+          24/7 monitoring with live video feed so you can check on your pup
+          anywhere in the galaxy.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  :root {
+    --primary: #6d28d9;
+    --primary-light: #8b5cf6;
+  }
+  body {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #faf5ff;
+  }
+  .gradient-bg {
+    background: linear-gradient(135deg, #fbd5ff 0%, #fde8ff 100%);
+  }
 </style>

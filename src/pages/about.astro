@@ -1,8 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const bio = `Welcome to Sunnyside Day Care! We are passionate about providing loving and reliable care for your furry friends. 
-Our mission is to create a safe and fun environment where dogs can feel at home while you're away. With years of experience and a 
-dedicated team, we ensure your pets receive the best attention and care possible. Thank you for trusting us with your beloved companions.`;
+const bio = `Welcome to your dog’s home away from home—right in the heart of the Bay Area! Based in beautiful Redwood City, our dog sitting service is built on love, trust, and tail-wagging happiness. 
+Whether you're heading out of town or just need a helping paw, we’re here to help make your dog’s day as joyful as possible.
+
+We treat every dog like family, offering personalized attention, plenty of playtime, and a cozy environment that feels just like home. With many years of experience and a deep passion for animals,
+we’re proud to be the reliable choice for pet parents throughout the Peninsula.
+
+Because when you’re away, your dog deserves the very best—and that’s exactly what we deliver.`;
 ---
 
 <style>
@@ -20,8 +24,7 @@ dedicated team, we ensure your pets receive the best attention and care possible
   }
 
   .hero img {
-    max-width: 100%;
-    max-height: 100%;
+   
 
     object-fit: contain;
     border-radius: 8px;
@@ -35,19 +38,20 @@ dedicated team, we ensure your pets receive the best attention and care possible
     font-size: 1.2rem;
     line-height: 1.6;
     color: #333;
+    
   }
 </style>
 
 <Layout>
-  <section class="hero">
-    <img src="/src/assets/aboutus.jpg" alt="Hero Image" />
+  <section class="">
+    <img src="/src/assets/bg-about.jpg" alt="Hero Image" />
   </section>
   <section class="about-text">
     <!-- <body class="min-h-screen flex items-center justify-center p-4"> -->
     <div class="text-center">
       <!-- Main Pink Title -->
       <h1
-        class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600 animate-pulse"
+        class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 mt-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600 animate-pulse"
       >
         How It All Started.
       </h1>
@@ -67,10 +71,26 @@ dedicated team, we ensure your pets receive the best attention and care possible
         </div>
       </div>
       <!-- Subtitle with softer pink -->
-      <h2 class="text-xl md:text-2xl text-pink-500 mb-8">
+      <!-- <h2 class="text-xl md:text-2xl text-pink-500 mb-8">
         My Passion For Dog Sitting.
-      </h2>
-      <p>{bio}</p>
+      </h2> -->
+      <div class="max-w-2xl mx-auto text-gray-700">
+        <p>
+          Hi, I’m Karla the founder of Sunnyside Dog Daycare. I’m thrilled to share my journey with you. 
+          Growing up, I always had a deep love for animals, especially dogs. 
+          My passion for dog sitting blossomed when I realized how much joy and companionship these furry friends bring into our lives.
+        </p>
+        <br>
+        <p>
+          After years of caring for my own dogs and volunteering at local shelters, I decided to turn my passion into a profession. 
+          I wanted to create a space where dogs could feel safe, loved, and happy while their owners were away.
+        </p>
+        <br>
+      
+
+      </div>
+      <br>
+      <p> Thank you for trusting us with your beloved companions.</p>
 
       <!-- Color palette showcase -->
       <!-- <div class="flex flex-col items-center">
@@ -109,4 +129,16 @@ dedicated team, we ensure your pets receive the best attention and care possible
       Contact Us Now
     </button>
   </div>
+
+  <section class="meet-owner-section" style="max-width: 800px; margin: 3rem auto; padding: 0 1rem; color: #333;">
+    <h2 class="text-4xl font-bold mb-4 text-center text-pink-500">Meet the Owner</h2>
+    <div class="owner-bio" style="font-size: 1.1rem; line-height: 1.6; text-align: center;">
+      <p>
+        Hi, I’m Karla, the passionate founder of Sunnyside Dog Daycare. With a lifelong love for animals and years of experience caring for dogs, I created this space to provide a safe, loving, and joyful environment for your furry family members.
+      </p>
+      <p style="margin-top: 1rem;">
+        When I’m not caring for dogs, you can find me exploring local parks or volunteering at animal shelters. I’m dedicated to making sure every dog feels at home and every owner feels peace of mind.
+      </p>
+    </div>
+  </section>
 </Layout>
