@@ -1,0 +1,293 @@
+---
+import '../styles/global.css';
+
+---
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawfect Care | Professional Dog Sitting Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <!-- Header/Navigation -->
+  <header class="bg-white shadow-sm">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+          <span class="text-xl font-bold text-gray-800">Pawfect Care</span>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#" class="text-blue-600 font-medium">Home</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600">Services</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600">About</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600">Pricing</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600">Contact</a>
+        </nav>
+        <button class="md:hidden text-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-50 to-green-50 py-16">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">Your Dog's <span class="text-blue-600">Second Family</span></h1>
+        <p class="text-lg text-gray-600 mb-8">Professional, loving care for your furry friend when you can't be there. Our certified sitters provide the perfect home away from home.</p>
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+          <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">Book Now</button>
+          <button class="border-2 border-blue-600 text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 transition duration-300">Learn More</button>
+        </div>
+      </div>
+      <div class="md:w-1/2 relative">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/77ca397a-1ee2-46f0-a723-4687dbb6c06e.png" alt="Happy golden retriever playing with a professional dog sitter in a sunny yard with green grass and toys scattered around" class="rounded-lg shadow-xl float-animation max-w-full h-auto">
+        <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-md hidden md:block">
+          <div class="flex items-center">
+            <div class="bg-blue-100 p-2 rounded-full mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-bold text-gray-800">Certified Professionals</p>
+              <p class="text-sm text-gray-600">100+ happy clients</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Our <span class="text-blue-600">Services</span></h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">We offer comprehensive care tailored to your dog's unique needs and personality.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+          <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">In-Home Boarding</h3>
+          <p class="text-gray-600">Your dog stays in a loving home environment with one of our certified sitters, enjoying playtime, walks, and lots of attention.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+          <div class="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Dog Walking</h3>
+          <p class="text-gray-600">Regular walks to keep your dog happy and healthy, with GPS-tracked routes and photo updates from every walk.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+          <div class="bg-orange-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Day Care</h3>
+          <p class="text-gray-600">Flexible day care options with socialization, playtime, and rest periods tailored to your dog's energy level and personality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Happy <span class="text-blue-600">Clients</span></h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Don't just take our word for it - hear from pet parents who've trusted us with their furry family members.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-md">
+          <div class="flex items-center mb-4">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ef5280b6-b471-48b9-b6c5-9277ce86b6f2.png" alt="Smiling woman in her 30s with dark hair, holding a small white dog in a park setting" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold text-gray-800">Sarah J.</h4>
+              <div class="flex text-yellow-400">
+                ★ ★ ★ ★ ★
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600">"My pup Max comes back from every walk happier than ever! The daily photo updates give me such peace of mind while I'm at work."</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md">
+          <div class="flex items-center mb-4">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d992aeb4-d789-4f38-8ffc-092264a2c71b.png" alt="Middle-aged man with glasses smiling with his golden retriever in a suburban backyard" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold text-gray-800">Michael T.</h4>
+              <div class="flex text-yellow-400">
+                ★ ★ ★ ★ ★
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600">"Best decision we made for our golden! He gets so excited when we pull up to his sitter's house - it's like he's going to doggy Disneyland."</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md">
+          <div class="flex items-center mb-4">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eff275a4-c312-4048-91bc-337f79c22405.png" alt="Young couple smiling with their two small mixed breed dogs in an urban park setting" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold text-gray-800">Emma & David</h4>
+              <div class="flex text-yellow-400">
+                ★ ★ ★ ★ ★
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600">"As first-time dog owners, we were nervous about leaving our pups. Pawfect Care made it so easy with their thorough process and constant updates."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-blue-600 text-white py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Ready to give your dog the <span class="text-yellow-300">pawfect</span> care?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Schedule a free meet-and-greet to see if we're the right fit for your furry family member.</p>
+      <button class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            <span class="text-xl font-bold">Pawfect Care</span>
+          </div>
+          <p class="text-gray-400 text-sm">Providing loving, professional dog care services since 2018.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Services</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white">In-Home Boarding</a></li>
+            <li><a href="#" class="hover:text-white">Dog Walking</a></li>
+            <li><a href="#" class="hover:text-white">Day Care</a></li>
+            <li><a href="#" class="hover:text-white">Pet Taxi</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Company</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white">About Us</a></li>
+            <li><a href="#" class="hover:text-white">Our Team</a></li>
+            <li><a href="#" class="hover:text-white">Testimonials</a></li>
+            <li><a href="#" class="hover:text-white">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Contact</h4>
+          <address class="not-italic text-gray-400">
+            123 Paws Avenue<br>
+            Dogville, CA 90210<br>
+            <a href="mailto:hello@pawfectcare.com" class="hover:text-white">hello@pawfectcare.com</a><br>
+            (555) 123-4567
+          </address>
+          <div class="flex space-x-4 mt-4">
+            <a href="#" class="text-gray-400 hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+        <p>© 2023 Pawfect Care. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple Contact Form -->
+  <div class="fixed bottom-8 right-8 z-50 hidden" id="contactWidget">
+    <div class="bg-white rounded-xl shadow-xl w-80 max-w-full">
+      <div class="bg-blue-600 text-white px-6 py-4 rounded-t-xl flex justify-between items-center">
+        <h3 class="font-bold text-lg">Contact Us</h3>
+        <button id="closeWidget" class="text-white hover:text-blue-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+      <form class="p-6">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+          <input type="text" id="name" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+          <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+          <textarea id="message" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Contact button -->
+  <button id="contactButton" class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-xl hover:bg-blue-700 transition duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+    </svg>
+  </button>
+
+  <script>
+    // Simple contact widget toggle
+    const contactButton = document.getElementById('contactButton');
+    const contactWidget = document.getElementById('contactWidget');
+    const closeWidget = document.getElementById('closeWidget');
+
+    if (contactButton && contactWidget) {
+      contactButton.addEventListener('click', () => {
+        contactWidget.classList.toggle('hidden');
+      });
+    }
+
+    if (closeWidget && contactWidget) {
+      closeWidget.addEventListener('click', () => {
+        contactWidget.classList.add('hidden');
+      });
+    }
+  </script>
+</body>
+
+
