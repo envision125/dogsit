@@ -1,3 +1,10 @@
+---
+import footerLogo from "../assets/Sunnyside.jpg";
+import { Image } from "astro:assets";
+
+---
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,10 +27,11 @@
                 <!-- Logo Section -->
                 <div class="w-full md:w-1/4 flex flex-col items-center md:items-start mb-8 md:mb-0">
                     <div class="mb-4">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/074e8005-7583-4691-8b4a-755a44e33933.png" alt="Company Logo - Minimalist modern wordmark in white with blue accent, clean typography" class="h-12">
+
+                        <Image src={footerLogo} alt="Sunnyside Dog Daycare Logo" class=""/>
                     </div>
-                    <p class="text-gray-400 text-center md:text-left">
-                       Sunnyside Dog Daycare </p>
+                    <!-- <p class="text-gray-400 text-center md:text-left">
+                       Sunnyside Dog Daycare </p> -->
                        
                 </div>
                 
@@ -94,7 +102,7 @@
             <div class="border-t border-gray-800 mt-12 pt-6">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <p class="text-gray-400 text-center md:text-left text-sm">
-                        © 2025 Sunnyside Dog Daycare Name| All rights reserved.
+                        © 2025 Sunnyside Dog Daycare| All rights reserved.
                     </p>
                     <!-- <div class="mt-4 md:mt-0 flex space-x-6">
                         <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
