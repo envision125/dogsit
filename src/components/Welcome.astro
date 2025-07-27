@@ -8,6 +8,14 @@ import ReviewSection from "./ReviewSection.astro";
 import "./ImageSlideSection.astro";
 import ImageSlideSection from "./ImageSlideSection.astro";
 
+import Dog1 from '../assets/dog1.jpg';
+import Dog2 from '../assets/dog3.jpg';
+import Dog3 from '../assets/pet3.jpg';
+import Dog4 from '../assets/pet7.jpg';
+import Dog5 from '../assets/dog4.jpg';
+import Dog6 from '../assets/dog12.jpg';
+
+
 import Testimonials from "./testimonials.astro";
 ---
 
@@ -279,7 +287,7 @@ import Testimonials from "./testimonials.astro";
         class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
       >
         <img
-          src="src/assets/pet3.jpg"
+           src={Dog3.src}
           alt="Astronaut playing with dogs in a futuristic space-themed dog park"
           class="w-full h-auto rounded-lg shadow-xl"
         />
@@ -289,7 +297,7 @@ import Testimonials from "./testimonials.astro";
         class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
       >
         <img
-          src="src/assets/pet7.jpg"
+           src={Dog4.src}
           alt="Astronaut playing with dogs in a futuristic space-themed dog park"
           class="w-full h-auto rounded-lg shadow-xl"
         />
@@ -300,7 +308,7 @@ import Testimonials from "./testimonials.astro";
         class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
       >
         <img
-          src="src/assets/dog4.jpg"
+           src={Dog5.src}
           alt="Astronaut playing with dogs in a futuristic space-themed dog park"
           class="w-full h-auto rounded-lg shadow-xl"
         />
@@ -311,7 +319,7 @@ import Testimonials from "./testimonials.astro";
         class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
       >
         <img
-          src="src/assets/dog12.jpg"
+          src={Dog6.src}
           alt="Astronaut playing with dogs in a futuristic space-themed dog park"
           class="w-full h-auto rounded-lg shadow-xl"
         />
