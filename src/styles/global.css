@@ -75,7 +75,9 @@ hr {
   padding: 0;
   margin: 0;
 }
-
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
 .hamburger .line {
   width: 100%;
   height: 3px;
