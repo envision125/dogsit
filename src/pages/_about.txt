@@ -290,3 +290,128 @@ const founderName = "[Founder Name]";
     .hero h1 { font-size: 2.1rem; }
   }
 </style>
+
+
+--------------
+
+old
+
+
+------------
+
+
+---
+import Layout from "../layouts/Layout.astro";
+const bio = `Welcome to your dog’s home away from home—right in the heart of the Bay Area! Based in beautiful Redwood City, our dog sitting service is built on love, trust, and tail-wagging happiness. 
+Whether you're heading out of town or just need a helping paw, we’re here to help make your dog’s day as joyful as possible.
+
+We treat every dog like family, offering personalized attention, plenty of playtime, and a cozy environment that feels just like home. With many years of experience and a deep passion for animals,
+we’re proud to be the reliable choice for pet parents throughout the Peninsula.
+
+Because when you’re away, your dog deserves the very best—and that’s exactly what we deliver.`;
+---
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+    margin: 2rem;
+  }
+
+  .hero img {
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: rgb(125, 124, 124) 0px 5px 15px;
+  }
+
+  .about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+  }
+</style>
+
+<Layout>
+  <!-- <section class="">
+    <img src="/src/assets/bg-about.jpg" alt="Hero Image" />
+  </section>
+  <section class="about-text">
+    <div class="text-center">
+      <h1
+        class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 mt-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600 animate-pulse"
+      >
+        How It All Started.
+      </h1>
+    </div>
+  </section> -->
+  <!-- About Section -->
+
+  <section id="about" class="py-16 bg-amber-50 px-4">
+    <div class="container mx-auto">
+      <div class="text-center mb-12">
+        <h2
+          class="text-3xl md:text-4xl font-bold mb-4 title-font animate-slide-in-left"
+        >
+          Our <span class="text-red-600">Story</span>
+        </h2>
+        <p
+          class="text-lg text-gray-600 max-w-3xl mx-auto animate-slide-in-left animate-delay-100"
+        >
+          One Pup Spakred It All.
+        </p>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="/src/assets/bg-about.jpg"
+              alt="Interior of a Mexican restaurant with vibrant decor and cultural elements"
+              class="w-full h-full float-animation object-cover"
+            />
+          </div>
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+          <h3 class="text-2xl font-bold mb-4 text-red-600">
+            Trusted care, happy pups, peace of mind for you.
+          </h3>
+          <p
+            class="text-gray-700 mb-4 animate-slide-in-right animate-delay-100"
+          >
+            It all started with my first puppy — the moment she came home, my
+            heart was hers. Something about being around dogs just makes
+            everything feel better, from the wagging tails to the silly zoomies.
+          </p>
+          <p
+            class="text-gray-700 mb-6 animate-slide-in-right animate-delay-200"
+          >
+            As a busy mom of two girls, I know life gets full fast. But that
+            love for dogs never faded — it turned into a passion for taking care
+            of other pups too. Now, every dog that stays with us gets treated
+            just like family: lots of love, cozy cuddles, and the same care I'd
+            want for my own.
+          </p>
+          <!-- <div class="flex items-center space-x-4">
+                        <div class="bg-red-600 text-white p-3 rounded-full">
+                            <i class="fas fa-utensils text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Fresh Ingredients</h4>
+                            <p class="text-sm">Locally sourced produce</p>
+                        </div>
+                    </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
