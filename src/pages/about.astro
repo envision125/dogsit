@@ -1,52 +1,71 @@
 ---
-// About page — [Business Name]
-// Drop this into src/pages/about.astro in your Astro project.
-// Swap the bracketed [placeholders] for real content/images when ready.
+import Layout from "../layouts/Layout.astro";
+const bio = `Welcome to your dog’s home away from home—right in the heart of the Bay Area! Based in beautiful Redwood City, our dog sitting service is built on love, trust, and tail-wagging happiness. 
+Whether you're heading out of town or just need a helping paw, we’re here to help make your dog’s day as joyful as possible.
+
+We treat every dog like family, offering personalized attention, plenty of playtime, and a cozy environment that feels just like home. With many years of experience and a deep passion for animals,
+we’re proud to be the reliable choice for pet parents throughout the Peninsula.
+
+Because when you’re away, your dog deserves the very best—and that’s exactly what we deliver.`;
 
 const businessName = "[Business Name]";
 const founderName = "[Founder Name]";
 ---
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — {businessName}</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-</head>
-<body>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
 
-  <nav>
-    <div class="logo">
-      <svg class="logo-mark" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="24" fill="#4F6B4A" />
-        <path d="M24 10 L30 22 L18 22 Z" fill="#F2E6CE" />
-        <circle cx="24" cy="30" r="7" fill="#D9A441" />
-      </svg>
-      {businessName}
+    margin: 2rem;
+  }
+
+  .hero img {
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: rgb(125, 124, 124) 0px 5px 15px;
+  }
+
+  .about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+  }
+</style>
+
+<Layout>
+  <!-- <section class="">
+    <img src="/src/assets/bg-about.jpg" alt="Hero Image" />
+  </section>
+  <section class="about-text">
+    <div class="text-center">
+      <h1
+        class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 mt-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600 animate-pulse"
+      >
+        How It All Started.
+      </h1>
     </div>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/services">Services</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-    <a class="btn" href="/contact">Book a Sit</a>
-  </nav>
+  </section> -->
+  <!-- About Section -->
 
   <section class="hero">
-    <div class="trees"></div>
+    <div class=""></div>
     <div class="wrap">
       <div>
         <p class="kicker">About Us</p>
-        <h1>Loving care for your dog, close to home.</h1>
+        <h1>Loving care for your dog, while you're away.</h1>
         <p>
-          We're {businessName} — a small, local dog sitting service that treats
-          every pup like part of the family. Here's a bit about how it all started.
+          We're {businessName} are  small, local dog sitting service that treats every
+          pup like part of the family. Here's a bit about how it all started.
         </p>
         <a class="btn" href="#story">Read Our Story</a>
       </div>
@@ -63,230 +82,391 @@ const founderName = "[Founder Name]";
       </div>
       <div>
         <p class="kicker">Our Story</p>
-        <h2>It started with one very good puppy.</h2>
+        <h2>Love At First Sight</h2>
         <p>
-          [Placeholder — Our Story copy goes here. Warm, personal tone: a busy
-          parent juggling work and family who brought home their first puppy,
-          and quickly learned how much love — and logistics — a dog needs.
-          That experience became the seed for a business built on trust,
-          patience, and genuinely liking dogs.]
+          It all started with our own puppy, who needed a reliable sitter when
+          we traveled. We realized there was a need for a service that truly
+          cares for dogs like family, not just pets. Locally rooted and
+          passionate about providing excellent care.
+          <p></p>
+          <p class="signoff">— {founderName}, Founder</p>
         </p>
+      </div>
+    </div>
+
+    <section class="section-tint">
+      <div class="wrap">
+        <p class="kicker">What We Believe</p>
+        <h2>Why families trust us with their dogs</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="icon">🐶</div>
+            <h3>24/7 Monitor and Care</h3>
+            <p>
+              Your loved one never leaces our site. We always are takig care of it
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="icon">🌲</div>
+            <h3>Local &amp; familiar</h3>
+            <p>
+              [Placeholder blurb about being a neighborhood sitter who knows the
+              area's best walks.]
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="icon">💬</div>
+            <h3>Always in the loop</h3>
+            <p>
+              [Placeholder blurb about photo updates and clear communication
+              during every visit.]
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section-cream">
+      <div class="wrap meet">
+        <div class="meet-photo">
+          <span>[ Photo: sitter ]</span>
+        </div>
+        <div>
+          <p class="kicker">Meet Your Sitter</p>
+          <h2>Hi, I'm {founderName}!</h2>
+          <p>
+            [Placeholder — short, friendly bio. Mention experience with dogs,
+            why you love this work, and a fun personal detail.]
+          </p>
+          <ul class="paw-list">
+            <li>[Placeholder credential or certification]</li>
+            <li>[Placeholder — years of experience]</li>
+            <li>[Placeholder — pet CPR / first aid trained]</li>
+          </ul>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="cta">
+      <div class="wrap">
+        <h2>Ready to introduce your pup?</h2>
         <p>
-          [Placeholder — second paragraph: what makes the business different,
-          e.g. treating every dog like our own, flexible scheduling for busy
-          families, neighborhood-based care.]
+          Let's set up a free meet-and-greet so your dog can get comfy before
+          their first stay.
         </p>
-        <p class="signoff">— {founderName}, Founder</p>
+        <a class="btn" href="/contact">Get in Touch</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section-tint">
-    <div class="wrap">
-      <p class="kicker">What We Believe</p>
-      <h2>Why families trust us with their dogs</h2>
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="icon">🐶</div>
-          <h3>Treated like family</h3>
-          <p>[Placeholder blurb about personalized, attentive care for every dog.]</p>
-        </div>
-        <div class="value-card">
-          <div class="icon">🌲</div>
-          <h3>Local &amp; familiar</h3>
-          <p>[Placeholder blurb about being a neighborhood sitter who knows the area's best walks.]</p>
-        </div>
-        <div class="value-card">
-          <div class="icon">💬</div>
-          <h3>Always in the loop</h3>
-          <p>[Placeholder blurb about photo updates and clear communication during every visit.]</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-cream">
-    <div class="wrap meet">
-      <div class="meet-photo">
-        <span>[ Photo: sitter ]</span>
-      </div>
-      <div>
-        <p class="kicker">Meet Your Sitter</p>
-        <h2>Hi, I'm {founderName}!</h2>
-        <p>
-          [Placeholder — short, friendly bio. Mention experience with dogs,
-          why you love this work, and a fun personal detail.]
-        </p>
-        <ul class="paw-list">
-          <li>[Placeholder credential or certification]</li>
-          <li>[Placeholder — years of experience]</li>
-          <li>[Placeholder — pet CPR / first aid trained]</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <div class="wrap">
-      <h2>Ready to introduce your pup?</h2>
-      <p>Let's set up a free meet-and-greet so your dog can get comfy before their first stay.</p>
-      <a class="btn" href="/contact">Get in Touch</a>
-    </div>
-  </section>
-
-  <footer>
+    <!-- <footer>
     © 2026 {businessName}. All rights reserved. · [Email] · [Phone]
-  </footer>
+  </footer> -->
+  </section>
 
-</body>
-</html>
+  <style>
+    :root {
+      --bark: #4a3527;
+      --moss: #f386e2;
+      --moss-dark: #1cb1e7;
+      --cream: #fbf4e8;
+      --cream-deep: #f2e6ce;
+      --gold: #d941c2;
+      --sky: #efe3ef;
+      --ink: #2e2a24;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Nunito", sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+    h1,
+    h2,
+    h3 {
+      font-family: "Baloo 2", sans-serif;
+      color: var(--moss-dark);
+    }
+    a {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-<style>
-  :root {
-    --bark: #4a3527;
-    --moss: #4f6b4a;
-    --moss-dark: #37502f;
-    --cream: #fbf4e8;
-    --cream-deep: #f2e6ce;
-    --gold: #d9a441;
-    --sky: #e7efe3;
-    --ink: #2e2a24;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Nunito', sans-serif;
-    color: var(--ink);
-    background: var(--cream);
-    line-height: 1.6;
-  }
-  h1, h2, h3 { font-family: 'Baloo 2', sans-serif; color: var(--moss-dark); }
-  a { color: inherit; }
-  img { max-width: 100%; display: block; }
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Baloo 2";
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--moss-dark);
+    }
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      font-weight: 600;
+    }
+    nav a {
+      text-decoration: none;
+    }
+    .btn {
+      background: var(--gold);
+      color: var(--bark);
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 3px 0 #b8842c;
+    }
 
-  nav {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 20px 24px; max-width: 1080px; margin: 0 auto;
-  }
-  .logo { display: flex; align-items: center; gap: 10px; font-family: 'Baloo 2'; font-weight: 700; font-size: 1.25rem; color: var(--moss-dark); }
-  .logo-mark { width: 38px; height: 38px; }
-  nav ul { list-style: none; display: flex; gap: 28px; font-weight: 600; }
-  nav a { text-decoration: none; }
-  .btn {
-    background: var(--gold); color: var(--bark); font-weight: 700;
-    padding: 10px 20px; border-radius: 999px; text-decoration: none;
-    display: inline-block; box-shadow: 0 3px 0 #b8842c;
-  }
+    /* HERO */
+    .hero {
+      background: linear-gradient(180deg, var(--sky) 0%, var(--cream) 100%);
+      padding: 60px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero .wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 46ch;
+      margin-bottom: 26px;
+    }
+    .hero-art {
+      background: var(--moss);
+      border-radius: 24px;
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cream);
+      font-weight: 600;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+    .hero-art span {
+      opacity: 0.85;
+    }
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(180deg, var(--sky) 0%, var(--cream) 100%);
-    padding: 60px 0 80px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero .wrap {
-    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center;
-  }
-  .hero h1 { font-size: 2.6rem; line-height: 1.15; margin-bottom: 18px; }
-  .hero p { font-size: 1.1rem; max-width: 46ch; margin-bottom: 26px; }
-  .hero-art {
-    background: var(--moss);
-    border-radius: 24px;
-    aspect-ratio: 4/3;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--cream); font-weight: 600; text-align: center; padding: 20px;
-    position: relative;
-  }
-  .hero-art span { opacity: .85; }
+    .trees {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: repeating-linear-gradient(
+        to right,
+        var(--moss) 0 24px,
+        transparent 24px 48px
+      );
+      opacity: 0.15;
+    }
 
-  .trees {
-    position: absolute; bottom: 0; left: 0; right: 0; height: 70px;
-    background: repeating-linear-gradient(
-      to right,
-      var(--moss) 0 24px,
-      transparent 24px 48px
-    );
-    opacity: .15;
-  }
+    /* SECTION helpers */
+    section {
+      padding: 70px 0;
+    }
+    .section-cream {
+      background: var(--cream);
+    }
+    .section-tint {
+      background: var(--cream-deep);
+    }
+    .kicker {
+      color: var(--moss);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
 
-  /* SECTION helpers */
-  section { padding: 70px 0; }
-  .section-cream { background: var(--cream); }
-  .section-tint { background: var(--cream-deep); }
-  .kicker { color: var(--moss); font-weight: 700; margin-bottom: 8px; }
+    /* OUR STORY */
+    .story {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .story-img {
+      background: var(--moss-dark);
+      border-radius: 20px;
+      aspect-ratio: 1/1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cream);
+      font-weight: 600;
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 50px;
+    }
+    .story h2 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+    }
+    .story p {
+      margin-bottom: 16px;
+      max-width: 56ch;
+    }
+    .signoff {
+      font-family: "Baloo 2";
+      color: var(--moss-dark);
+      margin-top: 10px;
+    }
 
-  /* OUR STORY */
-  .story {
-    display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: center;
-  }
-  .story-img {
-    background: var(--moss-dark);
-    border-radius: 20px;
-    aspect-ratio: 1/1;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--cream); font-weight: 600; text-align: center; padding: 20px;
-  }
-  .story h2 { font-size: 2rem; margin-bottom: 18px; }
-  .story p { margin-bottom: 16px; max-width: 56ch; }
-  .signoff { font-family: 'Baloo 2'; color: var(--moss-dark); margin-top: 10px; }
+    /* VALUES */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 36px;
+    }
+    .value-card {
+      background: var(--cream);
+      border: 2px solid var(--cream-deep);
+      border-radius: 18px;
+      padding: 28px 24px;
+    }
+    .value-card .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--sky);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      font-size: 1.3rem;
+    }
+    .value-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
 
-  /* VALUES */
-  .values-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 36px;
-  }
-  .value-card {
-    background: var(--cream);
-    border: 2px solid var(--cream-deep);
-    border-radius: 18px;
-    padding: 28px 24px;
-  }
-  .value-card .icon {
-    width: 46px; height: 46px; border-radius: 50%;
-    background: var(--sky); display: flex; align-items: center; justify-content: center;
-    margin-bottom: 14px; font-size: 1.3rem;
-  }
-  .value-card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+    /* MEET THE SITTER */
+    .meet {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 44px;
+      align-items: center;
+    }
+    .meet-photo {
+      background: var(--gold);
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+      max-width: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bark);
+      font-weight: 700;
+      text-align: center;
+      padding: 20px;
+    }
+    .meet h2 {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+    .meet p {
+      margin-bottom: 14px;
+      max-width: 58ch;
+    }
+    .paw-list {
+      list-style: none;
+      margin-top: 18px;
+    }
+    .paw-list li {
+      padding-left: 28px;
+      position: relative;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .paw-list li::before {
+      content: "🐾";
+      position: absolute;
+      left: 0;
+    }
 
-  /* MEET THE SITTER */
-  .meet {
-    display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 44px; align-items: center;
-  }
-  .meet-photo {
-    background: var(--gold);
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    max-width: 280px;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--bark); font-weight: 700; text-align: center; padding: 20px;
-  }
-  .meet h2 { font-size: 2rem; margin-bottom: 14px; }
-  .meet p { margin-bottom: 14px; max-width: 58ch; }
-  .paw-list { list-style: none; margin-top: 18px; }
-  .paw-list li { padding-left: 28px; position: relative; margin-bottom: 10px; font-weight: 600; }
-  .paw-list li::before { content: "🐾"; position: absolute; left: 0; }
+    /* CTA */
+    .cta {
+      background: var(--moss-dark);
+      color: var(--cream);
+      text-align: center;
+      padding: 70px 24px;
+    }
+    .cta h2 {
+      color: var(--cream);
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+    .cta p {
+      max-width: 50ch;
+      margin: 0 auto 26px;
+      opacity: 0.9;
+    }
 
-  /* CTA */
-  .cta {
-    background: var(--moss-dark);
-    color: var(--cream);
-    text-align: center;
-    padding: 70px 24px;
-  }
-  .cta h2 { color: var(--cream); font-size: 2rem; margin-bottom: 14px; }
-  .cta p { max-width: 50ch; margin: 0 auto 26px; opacity: .9; }
+    footer {
+      background: var(--bark);
+      color: var(--cream-deep);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.9rem;
+    }
 
-  footer {
-    background: var(--bark); color: var(--cream-deep);
-    text-align: center; padding: 28px 24px; font-size: .9rem;
-  }
-
-  @media (max-width: 800px) {
-    .hero .wrap, .story, .meet { grid-template-columns: 1fr; }
-    .story-img { order: -1; }
-    .values-grid { grid-template-columns: 1fr; }
-    nav ul { display: none; }
-    .hero h1 { font-size: 2.1rem; }
-  }
-</style>
+    @media (max-width: 800px) {
+      .hero .wrap,
+      .story,
+      .meet {
+        grid-template-columns: 1fr;
+      }
+      .story-img {
+        order: -1;
+      }
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+      nav ul {
+        display: none;
+      }
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
+</Layout>
