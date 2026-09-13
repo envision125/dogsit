@@ -47,7 +47,7 @@ import { Image } from "astro:assets";
             height: 2px;
             bottom: -4px;
             left: 0;
-            background-color: #f680c5;
+            background-color: #dfa832;
             transition: width 0.3s ease;
         }
         .nav-link:hover::after {
@@ -65,7 +65,7 @@ import { Image } from "astro:assets";
 </head>
 <body class="bg-gray-50">
     <!-- Navigation Bar -->
-    <nav class="bg-black shadow-md sticky top-0 z-50">
+    <nav class="bg-forest-900 shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
@@ -77,20 +77,20 @@ import { Image } from "astro:assets";
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="nav-link text-sky-500 hover:text-pink-300 px-3 py-2 text-base font-semibold">Home</a>
-                    <a href="/about/" class="nav-link text-sky-500 hover:text-pink-300 px-3 py-2 text-base font-semibold">About</a>
-                    <a href="#happy-clients" class="nav-link text-sky-500 hover:text-pink-300 px-3 py-2 text-base font-semibold">Clients</a>
-                    <a href="/services/" class="nav-link text-sky-500 hover:text-pink-300 px-3 py-2 text-base font-semibold">Services</a>
+                    <a href="/" class="nav-link text-cream hover:text-gold-400 px-3 py-2 text-base font-semibold">Home</a>
+                    <a href="/about/" class="nav-link text-cream hover:text-gold-400 px-3 py-2 text-base font-semibold">About</a>
+                    <a href="#happy-clients" class="nav-link text-cream hover:text-gold-400 px-3 py-2 text-base font-semibold">Clients</a>
+                    <a href="/services/" class="nav-link text-cream hover:text-gold-400 px-3 py-2 text-base font-semibold">Services</a>
 
                     <!-- CTA Button -->
-                    <a href="/contact/" class="bg-pink-300 hover:bg-pink-300 text-white px-4 py-2 rounded-md text-base1 font-semibold transition-colors duration-300">
+                    <a href="/contact/" class="bg-gold-400 hover:bg-gold-500 text-forest-900 px-4 py-2 rounded-md text-base1 font-semibold transition-colors duration-300">
                         Contact Us
                     </a>
                 </div>
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-pink-300 hover:text-blue-400 focus:outline-none">
+                    <button id="mobile-menu-button" class="text-gold-400 hover:text-cream focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -98,14 +98,14 @@ import { Image } from "astro:assets";
         </div>
 
         <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="mobile-menu md:hidden bg-gray-50 shadow-lg">
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-cream shadow-lg">
             <div class="px-4 py-2 space-y-2">
-                <a href="/" class="block text-gray-800 hover:bg-blue-50 hover:text-sky-600 rounded-md px-3 py-2 text-sm font-medium">Home</a>
-                <a href="/about/" class="block text-gray-800 hover:bg-blue-50 hover:text-sky-600 rounded-md px-3 py-2 text-sm font-medium">Features</a>
-                <a href="/services/" class="block text-gray-800 hover:bg-blue-50 hover:text-sky-600 rounded-md px-3 py-2 text-sm font-medium">Pricing</a>
-                <a href="/clients/" class="block text-gray-800 hover:bg-blue-50 hover:text-sky-600 rounded-md px-3 py-2 text-sm font-medium">About</a>
-                <a href="/contact/" class="block text-gray-800 hover:bg-blue-50 hover:text-sky-600 rounded-md px-3 py-2 text-sm font-medium">Contact</a>
-                <button class="w-full bg-pink-300 hover:bg-sky-400 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 mt-2">
+                <a href="/" class="block text-forest-900 hover:bg-forest-50 hover:text-forest-600 rounded-md px-3 py-2 text-sm font-medium">Home</a>
+                <a href="/about/" class="block text-forest-900 hover:bg-forest-50 hover:text-forest-600 rounded-md px-3 py-2 text-sm font-medium">Features</a>
+                <a href="/services/" class="block text-forest-900 hover:bg-forest-50 hover:text-forest-600 rounded-md px-3 py-2 text-sm font-medium">Pricing</a>
+                <a href="/clients/" class="block text-forest-900 hover:bg-forest-50 hover:text-forest-600 rounded-md px-3 py-2 text-sm font-medium">About</a>
+                <a href="/contact/" class="block text-forest-900 hover:bg-forest-50 hover:text-forest-600 rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                <button class="w-full bg-gold-400 hover:bg-gold-500 text-forest-900 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 mt-2">
                     Get Started
                 </button>
             </div>
